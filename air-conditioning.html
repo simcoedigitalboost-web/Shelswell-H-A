@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Conditioning Installation & Repair Orillia | Shelswell Heating & Air</title>
+    <meta name="description" content="AC installation, repair & maintenance in Orillia, Barrie & Simcoe County. Beat the Ontario heat with reliable cooling. TSSA registered. Call 705-331-8117.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1a2744;
+            --navy-light: #2a3a5c;
+            --slate: #4a5568;
+            --warm-white: #faf9f7;
+            --cream: #f5f3ef;
+            --amber: #d97706;
+            --amber-light: #fbbf24;
+            --rust: #c2410c;
+            --text: #1f2937;
+            --text-light: #6b7280;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm-white); line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 700; line-height: 1.2; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        header { background: var(--navy); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .logo { color: white; font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+        .logo span { color: var(--amber); }
+        nav { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+        nav a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 16px; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+        nav a:hover { color: var(--amber-light); }
+        .nav-cta { background: var(--amber); color: white !important; border-radius: 6px; font-weight: 600; }
+        .nav-cta:hover { background: var(--rust); }
+
+        
+        /* Dropdown Menu */
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-trigger { display: flex; align-items: center; gap: 4px; color: rgba(255,255,255,0.85); padding: 8px 16px; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: color 0.2s; }
+        .nav-dropdown-trigger::after { content: ''; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; margin-left: 4px; }
+        .nav-dropdown:hover .nav-dropdown-trigger { color: var(--amber-light); }
+        .nav-dropdown-menu { position: absolute; top: 100%; left: 0; background: white; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); min-width: 200px; padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; z-index: 200; }
+        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .nav-dropdown-menu a { display: block; padding: 10px 20px; color: #1f2937; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+        .nav-dropdown-menu a:hover { background: #f5f3ef; color: #1a2744; }
+
+        /* Mobile Menu */
+        .mobile-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 1001; }
+        .mobile-toggle span { display: block; width: 100%; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; }
+        .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .mobile-toggle.active span:nth-child(2) { opacity: 0; }
+        .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .mobile-menu-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--navy); z-index: 1000; flex-direction: column; justify-content: center; align-items: center; gap: 8px; }
+        .mobile-menu-overlay.active { display: flex; }
+        .mobile-menu-overlay a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: 500; padding: 16px 32px; transition: color 0.2s; }
+        .mobile-menu-overlay a:hover { color: var(--amber-light); }
+        .mobile-menu-overlay .nav-cta { margin-top: 16px; background: var(--amber); border-radius: 8px; font-size: 1.25rem; }
+
+        .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); padding: 80px 0; }
+        .page-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .page-hero h1 { color: white; font-size: clamp(2.25rem, 4.5vw, 3.25rem); margin-bottom: 20px; }
+        .page-hero h1 span { color: var(--amber-light); }
+        .page-hero p { color: rgba(255,255,255,0.85); font-size: 1.15rem; margin-bottom: 28px; }
+        .page-hero-image img { width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1rem; transition: all 0.2s; }
+        .btn-primary { background: var(--amber); color: white; }
+        .btn-primary:hover { background: var(--rust); transform: translateY(-2px); }
+
+        .content-section { padding: 80px 0; }
+        .content-section:nth-child(even) { background: var(--cream); }
+        .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .content-grid.reverse { direction: rtl; }
+        .content-grid.reverse > * { direction: ltr; }
+        .content-text h2 { font-size: clamp(1.75rem, 3.5vw, 2.25rem); color: var(--navy); margin-bottom: 20px; }
+        .content-text p { color: var(--text-light); font-size: 1.05rem; margin-bottom: 16px; }
+        .content-text ul { list-style: none; margin: 24px 0; }
+        .content-text ul li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; color: var(--text); }
+        .content-text ul li::before { content: '✓'; color: var(--amber); font-weight: bold; flex-shrink: 0; }
+        .content-image img { width: 100%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+
+        .services-breakdown { padding: 80px 0; }
+        .services-breakdown h2 { text-align: center; font-size: clamp(1.75rem, 3.5vw, 2.25rem); color: var(--navy); margin-bottom: 48px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .service-item { background: white; padding: 32px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.06); }
+        .service-item h3 { font-size: 1.25rem; color: var(--navy); margin-bottom: 12px; }
+        .service-item p { color: var(--text-light); font-size: 0.95rem; }
+
+        .faq-section { padding: 80px 0; background: var(--cream); }
+        .faq-section h2 { text-align: center; font-size: clamp(1.75rem, 3.5vw, 2.25rem); color: var(--navy); margin-bottom: 48px; }
+        .faq-grid { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: white; padding: 24px 32px; border-radius: 12px; margin-bottom: 16px; }
+        .faq-item h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 12px; }
+        .faq-item p { color: var(--text-light); font-size: 0.95rem; }
+
+        .cta { padding: 80px 0; background: linear-gradient(135deg, var(--amber) 0%, var(--rust) 100%); text-align: center; }
+        .cta h2 { color: white; font-size: clamp(1.75rem, 3.5vw, 2.5rem); margin-bottom: 16px; }
+        .cta p { color: rgba(255,255,255,0.9); font-size: 1.15rem; margin-bottom: 28px; }
+        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn-white { background: white; color: var(--navy); }
+        .btn-white:hover { background: var(--cream); transform: translateY(-2px); }
+        .btn-outline-white { background: transparent; color: white; border: 2px solid white; }
+        .btn-outline-white:hover { background: rgba(255,255,255,0.1); }
+
+        footer { background: var(--navy); color: white; padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+        .footer-brand p { color: rgba(255,255,255,0.7); margin-top: 16px; font-size: 0.95rem; }
+        .footer-col h4 { font-size: 1rem; margin-bottom: 20px; color: var(--amber-light); }
+        .footer-col a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 12px; font-size: 0.95rem; transition: color 0.2s; }
+        .footer-col a:hover { color: white; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.9rem; color: rgba(255,255,255,0.6); }
+
+        @media (max-width: 968px) {
+            .page-hero-grid, .content-grid { grid-template-columns: 1fr; gap: 40px; }
+            .content-grid.reverse { direction: ltr; }
+            .page-hero-image { order: -1; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 640px) {
+            .header-inner { justify-content: space-between; }
+            nav { display: none; }
+            .mobile-toggle { display: flex; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .footer-bottom { justify-content: center; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">Shelswell <span>H&A</span></a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-trigger">Services</span>
+                        <div class="nav-dropdown-menu">
+                            <a href="furnace-services.html">Furnaces</a>
+                            <a href="air-conditioning.html">Air Conditioning</a>
+                            <a href="heat-pumps.html">Heat Pumps</a>
+                            <a href="water-heaters.html">Water Heaters</a>
+                            <a href="gas-fireplaces.html">Gas Fireplaces</a>
+                            <a href="gas-lines.html">Gas Lines</a>
+                        </div>
+                    </div>
+                    <a href="index.html#about">About</a>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-trigger">Service Area</span>
+                        <div class="nav-dropdown-menu">
+                            <a href="orillia-hvac.html">Orillia</a>
+                            <a href="barrie-hvac.html">Barrie</a>
+                            <a href="oro-medonte-hvac.html">Oro-Medonte</a>
+                            <a href="severn-hvac.html">Severn</a>
+                        </div>
+                    </div>
+                    <a href="contact.html">Contact</a>
+                    <a href="tel:7053318117" class="nav-cta">705-331-8117</a>
+                </nav>
+                <button class="mobile-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay">
+        <a href="index.html">Home</a>
+        <a href="furnace-services.html">Furnaces</a>
+        <a href="air-conditioning.html">Air Conditioning</a>
+        <a href="heat-pumps.html">Heat Pumps</a>
+        <a href="water-heaters.html">Water Heaters</a>
+        <a href="gas-fireplaces.html">Gas Fireplaces</a>
+        <a href="gas-lines.html">Gas Lines</a>
+        <a href="index.html#about">About</a>
+        <a href="orillia-hvac.html">Orillia</a>
+        <a href="barrie-hvac.html">Barrie</a>
+        <a href="oro-medonte-hvac.html">Oro-Medonte</a>
+        <a href="severn-hvac.html">Severn</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:7053318117" class="nav-cta">705-331-8117</a>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-grid">
+                <div class="page-hero-content">
+                    <h1>Air Conditioning for <span>Ontario Summers</span></h1>
+                    <p>July hits and suddenly everyone remembers they need AC. We're here year-round—for new installs, repairs, and the annual tune-ups that keep your system running when you need it most.</p>
+                    <a href="tel:7053318117" class="btn btn-primary">Call 705-331-8117</a>
+                </div>
+                <div class="page-hero-image">
+                    <img src="images/ac-unit-napoleon.jpg" alt="Napoleon air conditioner installation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-text">
+                    <h2>AC repairs that get you cool fast</h2>
+                    <p>When your air conditioning quits in the middle of a heat wave, you don't want to wait three days for a service call. We prioritize AC emergencies during peak season because we know how miserable a hot house can be.</p>
+                    <p>We'll diagnose the problem, give you a straight answer on repair vs. replace, and get you back to comfortable as quickly as possible.</p>
+                    <ul>
+                        <li>Same-day service when available</li>
+                        <li>All major brands serviced</li>
+                        <li>Refrigerant top-ups and leak repairs</li>
+                        <li>Compressor, fan, and electrical repairs</li>
+                    </ul>
+                </div>
+                <div class="content-image">
+                    <img src="images/ac-unit-brick.jpg" alt="AC condenser unit beside brick house">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid reverse">
+                <div class="content-text">
+                    <h2>New AC installations</h2>
+                    <p>Adding air conditioning to a home that's never had it? Replacing an old unit that's limping along? We'll help you choose the right system for your home's size, your ductwork situation, and your budget.</p>
+                    <p>A properly sized and installed AC unit runs efficiently, lasts longer, and actually keeps your whole house comfortable—not just the room closest to the vents.</p>
+                    <ul>
+                        <li>Proper sizing for your home</li>
+                        <li>Napoleon and other quality brands</li>
+                        <li>Ductwork modifications if needed</li>
+                        <li>Clean, professional installation</li>
+                    </ul>
+                </div>
+                <div class="content-image">
+                    <img src="images/ac-unit-enclosure.jpg" alt="AC unit installation with protective enclosure">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-breakdown">
+        <div class="container">
+            <h2>Our AC Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>AC Installation</h3>
+                    <p>New central air conditioning for homes with existing ductwork, or complete system installations for homes adding AC for the first time.</p>
+                </div>
+                <div class="service-item">
+                    <h3>AC Repair</h3>
+                    <p>From refrigerant leaks to compressor failures, we diagnose and fix AC problems. We'll explain what went wrong and what it'll take to fix it.</p>
+                </div>
+                <div class="service-item">
+                    <h3>AC Maintenance</h3>
+                    <p>Annual tune-ups keep your AC running efficiently and help prevent mid-summer breakdowns. We clean coils, check refrigerant, and test performance.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Unit Relocation</h3>
+                    <p>Need your outdoor unit moved? Renovating and the condenser is in the way? We can relocate AC units and ensure everything works properly afterward.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>Common Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>My AC is running but not cooling. What's wrong?</h3>
+                    <p>Could be low refrigerant, a dirty filter restricting airflow, a frozen coil, or a failing compressor. We'll diagnose it and give you options before doing any work.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How often should I service my AC?</h3>
+                    <p>Once a year, ideally in spring before you need it. Regular maintenance catches small problems and keeps your system running efficiently.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can you add AC to a house that only has a furnace?</h3>
+                    <p>Usually, yes. If you have ductwork for your furnace, we can typically add an AC unit that shares those ducts. We'll assess your setup and let you know what's involved.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What size AC do I need?</h3>
+                    <p>It depends on your home's square footage, insulation, windows, and layout. We do proper calculations—oversized units cycle too frequently and undersized ones can't keep up.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Stay cool this summer</h2>
+            <p>Free quotes on new installations. Fast service on repairs.</p>
+            <div class="cta-buttons">
+                <a href="tel:7053318117" class="btn btn-white">Call 705-331-8117</a>
+                <a href="contact.html" class="btn btn-outline-white">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Shelswell <span>H&A</span></a>
+                    <p>Family-owned HVAC services for Orillia, Barrie, and Simcoe County. TSSA registered, fully insured, and committed to honest work.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="furnace-services.html">Furnaces</a>
+                    <a href="air-conditioning.html">Air Conditioning</a>
+                    <a href="heat-pumps.html">Heat Pumps</a>
+                    <a href="water-heaters.html">Water Heaters</a>
+                    <a href="gas-fireplaces.html">Gas Fireplaces</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Service Areas</h4>
+                    <a href="orillia-hvac.html">Orillia</a>
+                    <a href="barrie-hvac.html">Barrie</a>
+                    <a href="oro-medonte-hvac.html">Oro-Medonte</a>
+                    <a href="severn-hvac.html">Severn</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="tel:7053318117">705-331-8117</a>
+                    <span style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">tyrel@shelswellhvac.com</span>
+                    <span style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">josiah@shelswellhvac.com</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 Shelswell Heating & Air. All rights reserved.</span>
+                <span>51 Ward Ave, Oro-Medonte, ON</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu-overlay');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            mobileMenu.classList
