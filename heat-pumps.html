@@ -3,305 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heat Pump Installation Orillia & Barrie | Shelswell Heating & Air</title>
-    <meta name="description" content="Heat pump installation in Orillia, Barrie & Simcoe County. Energy-efficient heating and cooling in one system. We help with rebates too. Call 705-331-8117.">
+    <title>Heat Pump Installation Orillia | Sales & Service | Shelswell H&A</title>
+    <meta name="description" content="Heat pump installation and service in Orillia, Barrie & Simcoe County. Efficient heating and cooling year-round. TSSA registered. Call 705-331-8117.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root { --navy: #1a2744; --navy-light: #2a3a5c; --warm-white: #faf9f7; --cream: #f5f3ef; --amber: #d97706; --amber-light: #fbbf24; --rust: #c2410c; --text: #1f2937; --text-light: #6b7280; }
+        :root { --navy: #1a2744; --navy-light: #2a3a5c; --navy-dark: #111827; --warm-white: #faf9f7; --cream: #f5f3ef; --amber: #d97706; --amber-light: #fbbf24; --amber-glow: rgba(217, 119, 6, 0.15); --text: #1f2937; --text-light: #6b7280; --gradient-warm: linear-gradient(135deg, #d97706 0%, #ea580c 100%); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm-white); line-height: 1.6; }
-        h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 700; line-height: 1.2; }
+        body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm-white); line-height: 1.6; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 700; line-height: 1.15; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        header { background: var(--navy); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
-        .header-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        header { background: var(--navy); padding: 16px 0; position: fixed; top: 0; left: 0; right: 0; z-index: 100; transition: all 0.3s; }
+        header.scrolled { background: rgba(26, 39, 68, 0.98); backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0,0,0,0.15); }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
         .logo { color: white; font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; text-decoration: none; }
         .logo span { color: var(--amber); }
-        nav { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-        nav a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 16px; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
-        nav a:hover { color: var(--amber-light); }
-        .nav-cta { background: var(--amber); color: white !important; border-radius: 6px; font-weight: 600; }
-        .nav-cta:hover { background: var(--rust); }
-
-        
-        /* Dropdown Menu */
+        nav { display: flex; gap: 8px; align-items: center; }
+        nav > a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 16px; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+        nav > a:hover { color: var(--amber-light); }
+        .nav-cta { background: var(--gradient-warm); color: white !important; border-radius: 50px; font-weight: 600; padding: 10px 24px !important; box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3); }
+        .nav-cta:hover { transform: translateY(-2px); }
         .nav-dropdown { position: relative; }
-        .nav-dropdown-trigger { display: flex; align-items: center; gap: 4px; color: rgba(255,255,255,0.85); padding: 8px 16px; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: color 0.2s; }
+        .nav-dropdown-trigger { display: flex; align-items: center; gap: 4px; color: rgba(255,255,255,0.85); padding: 8px 16px; font-size: 0.95rem; font-weight: 500; cursor: pointer; }
         .nav-dropdown-trigger::after { content: ''; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; margin-left: 4px; }
         .nav-dropdown:hover .nav-dropdown-trigger { color: var(--amber-light); }
-        .nav-dropdown-menu { position: absolute; top: 100%; left: 0; background: white; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); min-width: 200px; padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; z-index: 200; }
+        .nav-dropdown-menu { position: absolute; top: 100%; left: 0; background: white; border-radius: 12px; box-shadow: 0 15px 50px rgba(0,0,0,0.15); min-width: 220px; padding: 12px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s; z-index: 200; }
         .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .nav-dropdown-menu a { display: block; padding: 10px 20px; color: #1f2937; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
-        .nav-dropdown-menu a:hover { background: #f5f3ef; color: #1a2744; }
-
-        /* Mobile Menu */
-        .mobile-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 1001; }
-        .mobile-toggle span { display: block; width: 100%; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; }
-        .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .mobile-toggle.active span:nth-child(2) { opacity: 0; }
-        .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-        .mobile-menu-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--navy); z-index: 1000; flex-direction: column; justify-content: center; align-items: center; gap: 8px; }
+        .nav-dropdown-menu a { display: block; padding: 12px 24px; color: var(--text); text-decoration: none; font-size: 0.9rem; }
+        .nav-dropdown-menu a:hover { background: var(--cream); padding-left: 28px; }
+        .mobile-toggle { display: none; flex-direction: column; gap: 5px; width: 32px; height: 32px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 1001; }
+        .mobile-toggle span { display: block; width: 100%; height: 2px; background: white; border-radius: 2px; }
+        .mobile-menu-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--navy-dark); z-index: 1000; flex-direction: column; justify-content: center; align-items: center; gap: 8px; }
         .mobile-menu-overlay.active { display: flex; }
-        .mobile-menu-overlay a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: 500; padding: 16px 32px; transition: color 0.2s; }
-        .mobile-menu-overlay a:hover { color: var(--amber-light); }
-        .mobile-menu-overlay .nav-cta { margin-top: 16px; background: var(--amber); border-radius: 8px; font-size: 1.25rem; }
-        .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); padding: 80px 0; }
-        .page-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .page-hero h1 { color: white; font-size: clamp(2.25rem, 4.5vw, 3.25rem); margin-bottom: 20px; }
+        .mobile-menu-overlay a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: 500; padding: 16px 32px; }
+        .page-hero { background: var(--navy-dark); padding: 140px 0 80px; position: relative; overflow: hidden; }
+        .page-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('images/ac-unit-red-gravel.jpg') center/cover; opacity: 0.15; }
+        .page-hero-content { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .page-hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); color: white; margin-bottom: 20px; }
         .page-hero h1 span { color: var(--amber-light); }
-        .page-hero p { color: rgba(255,255,255,0.85); font-size: 1.15rem; margin-bottom: 28px; }
-        .page-hero-image img { width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1rem; transition: all 0.2s; }
-        .btn-primary { background: var(--amber); color: white; }
-        .btn-primary:hover { background: var(--rust); transform: translateY(-2px); }
-        .content-section { padding: 80px 0; }
-        .content-section:nth-child(even) { background: var(--cream); }
+        .page-hero p { color: rgba(255,255,255,0.8); font-size: 1.15rem; margin-bottom: 32px; max-width: 500px; }
+        .page-hero-image img { width: 100%; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+        .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; border-radius: 50px; font-weight: 600; text-decoration: none; font-size: 1rem; transition: all 0.3s; }
+        .btn-primary { background: var(--gradient-warm); color: white; box-shadow: 0 8px 30px rgba(217, 119, 6, 0.35); }
+        .btn-primary:hover { transform: translateY(-3px); }
+        .services-section { padding: 80px 0; background: var(--navy); }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+        .section-label { display: inline-block; background: rgba(217, 119, 6, 0.15); color: var(--amber-light); padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px; }
+        .section-header h2 { font-size: clamp(2rem, 4vw, 2.75rem); color: white; margin-bottom: 16px; }
+        .section-header p { color: rgba(255,255,255,0.7); font-size: 1.05rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .service-card { background: var(--navy-light); border-radius: 20px; padding: 36px 28px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.4s; }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        .service-icon { width: 70px; height: 70px; background: rgba(217, 119, 6, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
+        .service-icon i { font-size: 1.75rem; color: var(--amber); }
+        .service-card h3 { font-size: 1.35rem; color: white; margin-bottom: 12px; }
+        .service-card p { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
+        .content-section { padding: 80px 0; background: var(--cream); }
+        .content-section.alt { background: var(--navy); }
         .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .content-grid.reverse { direction: rtl; }
         .content-grid.reverse > * { direction: ltr; }
-        .content-text h2 { font-size: clamp(1.75rem, 3.5vw, 2.25rem); color: var(--navy); margin-bottom: 20px; }
-        .content-text p { color: var(--text-light); font-size: 1.05rem; margin-bottom: 16px; }
+        .content-text h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); color: var(--navy); margin-bottom: 20px; }
+        .content-section.alt .content-text h2 { color: white; }
+        .content-section.alt .content-text h2 span { color: var(--amber-light); }
+        .content-text p { color: var(--text-light); margin-bottom: 16px; font-size: 1.05rem; }
+        .content-section.alt .content-text p { color: rgba(255,255,255,0.75); }
         .content-text ul { list-style: none; margin: 24px 0; }
         .content-text ul li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; color: var(--text); }
-        .content-text ul li::before { content: '✓'; color: var(--amber); font-weight: bold; flex-shrink: 0; }
-        .content-image img { width: 100%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
-        .services-breakdown { padding: 80px 0; }
-        .services-breakdown h2 { text-align: center; font-size: clamp(1.75rem, 3.5vw, 2.25rem); color: var(--navy); margin-bottom: 48px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .service-item { background: white; padding: 32px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.06); }
-        .service-item h3 { font-size: 1.25rem; color: var(--navy); margin-bottom: 12px; }
-        .service-item p { color: var(--text-light); font-size: 0.95rem; }
-        .faq-section { padding: 80px 0; background: var(--cream); }
-        .faq-section h2 { text-align: center; font-size: clamp(1.75rem, 3.5vw, 2.25rem); color: var(--navy); margin-bottom: 48px; }
-        .faq-grid { max-width: 800px; margin: 0 auto; }
-        .faq-item { background: white; padding: 24px 32px; border-radius: 12px; margin-bottom: 16px; }
-        .faq-item h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 12px; }
-        .faq-item p { color: var(--text-light); font-size: 0.95rem; }
-        .cta { padding: 80px 0; background: linear-gradient(135deg, var(--amber) 0%, var(--rust) 100%); text-align: center; }
-        .cta h2 { color: white; font-size: clamp(1.75rem, 3.5vw, 2.5rem); margin-bottom: 16px; }
-        .cta p { color: rgba(255,255,255,0.9); font-size: 1.15rem; margin-bottom: 28px; }
-        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-        .btn-white { background: white; color: var(--navy); }
-        .btn-white:hover { background: var(--cream); transform: translateY(-2px); }
-        .btn-outline-white { background: transparent; color: white; border: 2px solid white; }
-        .btn-outline-white:hover { background: rgba(255,255,255,0.1); }
-        footer { background: var(--navy); color: white; padding: 60px 0 30px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-        .footer-brand p { color: rgba(255,255,255,0.7); margin-top: 16px; font-size: 0.95rem; }
+        .content-section.alt .content-text ul li { color: rgba(255,255,255,0.85); }
+        .content-text ul li i { color: var(--amber); margin-top: 4px; }
+        .content-image img { width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+        .cta { padding: 80px 0; background: var(--navy-dark); text-align: center; position: relative; overflow: hidden; }
+        .cta::before { content: ''; position: absolute; top: 50%; left: 50%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(217, 119, 6, 0.15) 0%, transparent 60%); transform: translate(-50%, -50%); }
+        .cta h2 { font-size: clamp(2rem, 4vw, 2.75rem); color: white; margin-bottom: 16px; position: relative; z-index: 1; }
+        .cta p { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; position: relative; z-index: 1; }
+        .cta-phone { display: inline-flex; align-items: center; gap: 12px; font-size: 1.75rem; color: var(--amber-light); font-family: 'Fraunces', serif; font-weight: 700; text-decoration: none; position: relative; z-index: 1; }
+        .cta-phone:hover { color: var(--amber); transform: scale(1.05); }
+        footer { background: var(--navy-dark); color: white; padding: 60px 0 24px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand p { color: rgba(255,255,255,0.6); margin-top: 16px; font-size: 0.95rem; }
         .footer-col h4 { font-size: 1rem; margin-bottom: 20px; color: var(--amber-light); }
-        .footer-col a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 12px; font-size: 0.95rem; transition: color 0.2s; }
+        .footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; margin-bottom: 12px; font-size: 0.95rem; }
         .footer-col a:hover { color: white; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.9rem; color: rgba(255,255,255,0.6); }
-        @media (max-width: 968px) { .page-hero-grid, .content-grid { grid-template-columns: 1fr; gap: 40px; } .content-grid.reverse { direction: ltr; } .page-hero-image { order: -1; } .footer-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 640px) { .header-inner { justify-content: space-between; } nav { display: none; }
-            .mobile-toggle { display: flex; } .footer-grid { grid-template-columns: 1fr; text-align: center; } .footer-bottom { justify-content: center; text-align: center; } }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 0.9rem; color: rgba(255,255,255,0.5); }
+        @media (max-width: 1024px) { .page-hero-content { grid-template-columns: 1fr; text-align: center; } .page-hero-image { display: none; } .content-grid { grid-template-columns: 1fr; } .content-grid.reverse { direction: ltr; } }
+        @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 640px) { nav { display: none; } .mobile-toggle { display: flex; } .footer-grid { grid-template-columns: 1fr; text-align: center; } .page-hero { padding: 120px 0 60px; } }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-inner">
-                <a href="index.html" class="logo">Shelswell <span>H&A</span></a>
-                <nav>
-                    <a href="index.html">Home</a>
-                    <div class="nav-dropdown">
-                        <span class="nav-dropdown-trigger">Services</span>
-                        <div class="nav-dropdown-menu">
-                            <a href="furnace-services.html">Furnaces</a>
-                            <a href="air-conditioning.html">Air Conditioning</a>
-                            <a href="heat-pumps.html">Heat Pumps</a>
-                            <a href="water-heaters.html">Water Heaters</a>
-                            <a href="gas-fireplaces.html">Gas Fireplaces</a>
-                            <a href="gas-lines.html">Gas Lines</a>
-                        </div>
-                    </div>
-                    <a href="index.html#about">About</a>
-                    <div class="nav-dropdown">
-                        <span class="nav-dropdown-trigger">Service Area</span>
-                        <div class="nav-dropdown-menu">
-                            <a href="orillia-hvac.html">Orillia</a>
-                            <a href="barrie-hvac.html">Barrie</a>
-                            <a href="oro-medonte-hvac.html">Oro-Medonte</a>
-                            <a href="severn-hvac.html">Severn</a>
-                        </div>
-                    </div>
-                    <a href="contact.html">Contact</a>
-                    <a href="tel:7053318117" class="nav-cta">705-331-8117</a>
-                </nav>
-                <button class="mobile-toggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
+    <header><div class="container"><div class="header-inner"><a href="index.html" class="logo">Shelswell <span>H&A</span></a><nav><a href="index.html">Home</a><div class="nav-dropdown"><span class="nav-dropdown-trigger">Services</span><div class="nav-dropdown-menu"><a href="furnace-services.html">Furnaces</a><a href="air-conditioning.html">Air Conditioning</a><a href="heat-pumps.html">Heat Pumps</a><a href="water-heaters.html">Water Heaters</a><a href="gas-fireplaces.html">Gas Fireplaces</a><a href="gas-lines.html">Gas Lines</a></div></div><a href="index.html#about">About</a><div class="nav-dropdown"><span class="nav-dropdown-trigger">Service Area</span><div class="nav-dropdown-menu"><a href="orillia-hvac.html">Orillia</a><a href="barrie-hvac.html">Barrie</a><a href="oro-medonte-hvac.html">Oro-Medonte</a><a href="severn-hvac.html">Severn</a></div></div><a href="contact.html">Contact</a><a href="tel:7053318117" class="nav-cta">705-331-8117</a></nav><button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button></div></div></header>
+    <div class="mobile-menu-overlay"><a href="index.html">Home</a><a href="furnace-services.html">Furnaces</a><a href="air-conditioning.html">Air Conditioning</a><a href="heat-pumps.html">Heat Pumps</a><a href="water-heaters.html">Water Heaters</a><a href="gas-fireplaces.html">Gas Fireplaces</a><a href="gas-lines.html">Gas Lines</a><a href="contact.html">Contact</a><a href="tel:7053318117" class="nav-cta">705-331-8117</a></div>
 
-    <div class="mobile-menu-overlay">
-        <a href="index.html">Home</a>
-        <a href="furnace-services.html">Furnaces</a>
-        <a href="air-conditioning.html">Air Conditioning</a>
-        <a href="heat-pumps.html">Heat Pumps</a>
-        <a href="water-heaters.html">Water Heaters</a>
-        <a href="gas-fireplaces.html">Gas Fireplaces</a>
-        <a href="gas-lines.html">Gas Lines</a>
-        <a href="index.html#about">About</a>
-        <a href="orillia-hvac.html">Orillia</a>
-        <a href="barrie-hvac.html">Barrie</a>
-        <a href="oro-medonte-hvac.html">Oro-Medonte</a>
-        <a href="severn-hvac.html">Severn</a>
-        <a href="contact.html">Contact</a>
-        <a href="tel:7053318117" class="nav-cta">705-331-8117</a>
-    </div>
+    <section class="page-hero"><div class="container"><div class="page-hero-content"><div class="page-hero-text"><h1>Heat <span>Pumps</span></h1><p>Year-round comfort with one efficient system. Heat pumps provide heating and cooling while reducing your energy bills. Expert installation and service in Simcoe County.</p><a href="tel:7053318117" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call 705-331-8117</a></div><div class="page-hero-image"><img src="images/ac-unit-red-gravel.jpg" alt="Heat pump installation"></div></div></div></section>
 
-    <section class="page-hero">
-        <div class="container">
-            <div class="page-hero-grid">
-                <div class="page-hero-content">
-                    <h1>Heat Pumps: <span>Heating & Cooling in One</span></h1>
-                    <p>Heat pumps are the most energy-efficient way to heat and cool your home. They're not magic—but the energy savings are real, and the rebates available right now make them more affordable than ever.</p>
-                    <a href="tel:7053318117" class="btn btn-primary">Call 705-331-8117</a>
-                </div>
-                <div class="page-hero-image">
-                    <img src="images/ac-unit-red.jpg" alt="Heat pump installation in Simcoe County">
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="services-section"><div class="container"><div class="section-header"><span class="section-label">What We Offer</span><h2>Heat Pump Services</h2><p>Installation, repair, and maintenance for all types of heat pump systems.</p></div><div class="services-grid"><div class="service-card"><div class="service-icon"><i class="fa-solid fa-plus"></i></div><h3>Installation</h3><p>Professional heat pump installation sized perfectly for your home. We handle air-source and ductless mini-split systems.</p></div><div class="service-card"><div class="service-icon"><i class="fa-solid fa-wrench"></i></div><h3>Repair</h3><p>Fast diagnosis and repair for heat pumps that aren't heating or cooling properly. All makes and models.</p></div><div class="service-card"><div class="service-icon"><i class="fa-solid fa-clipboard-check"></i></div><h3>Maintenance</h3><p>Regular tune-ups to keep your heat pump running at peak efficiency year-round.</p></div></div></div></section>
 
-    <section class="content-section">
-        <div class="container">
-            <div class="content-grid">
-                <div class="content-text">
-                    <h2>How heat pumps work</h2>
-                    <p>A heat pump doesn't generate heat—it moves it. In winter, it pulls heat from outdoor air (yes, even cold air has heat energy) and moves it inside. In summer, it reverses and works like an air conditioner, moving heat out of your home.</p>
-                    <p>Because they move heat rather than create it, heat pumps use significantly less energy than traditional furnaces. For many Simcoe County homes, they can cut heating costs substantially.</p>
-                    <ul>
-                        <li>Up to 3x more efficient than electric heat</li>
-                        <li>Heating and cooling from one system</li>
-                        <li>Works in Ontario winters (modern units handle -25°C)</li>
-                        <li>Lower carbon footprint than gas furnaces</li>
-                    </ul>
-                </div>
-                <div class="content-image">
-                    <img src="images/ac-unit-red-gravel.jpg" alt="Outdoor heat pump unit">
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="content-section"><div class="container"><div class="content-grid"><div class="content-text"><h2>Why Consider a Heat Pump?</h2><p>Heat pumps are one of the most efficient ways to heat and cool your home. Here's why homeowners are making the switch:</p><ul><li><i class="fa-solid fa-circle-check"></i> One system for both heating and cooling</li><li><i class="fa-solid fa-circle-check"></i> Up to 3x more efficient than traditional heating</li><li><i class="fa-solid fa-circle-check"></i> Lower monthly energy bills</li><li><i class="fa-solid fa-circle-check"></i> Reduced carbon footprint</li><li><i class="fa-solid fa-circle-check"></i> Government rebates often available</li><li><i class="fa-solid fa-circle-check"></i> Quiet operation</li></ul></div><div class="content-image"><img src="images/ac-unit-enclosure.jpg" alt="Heat pump unit"></div></div></div></section>
 
-    <section class="content-section">
-        <div class="container">
-            <div class="content-grid reverse">
-                <div class="content-text">
-                    <h2>Rebates and incentives</h2>
-                    <p>There are serious rebates available for heat pump installations right now—federal programs, provincial incentives, and utility rebates that can stack together.</p>
-                    <p>We'll help you understand what you qualify for and make sure the paperwork is done right. The rebate landscape changes, but right now is a good time to make the switch.</p>
-                    <ul>
-                        <li>Canada Greener Homes Grant</li>
-                        <li>Enbridge Home Efficiency Rebate</li>
-                        <li>We handle the paperwork</li>
-                        <li>Honest assessment of payback period</li>
-                    </ul>
-                </div>
-                <div class="content-image">
-                    <img src="images/team-together.jpg" alt="Shelswell Heating & Air team">
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="content-section alt"><div class="container"><div class="content-grid reverse"><div class="content-text"><h2>Types of <span>Heat Pumps</span></h2><p>We install and service multiple types of heat pump systems to fit your home and budget:</p><ul><li><i class="fa-solid fa-circle-check"></i> Air-source heat pumps (most common)</li><li><i class="fa-solid fa-circle-check"></i> Ductless mini-splits for homes without ductwork</li><li><i class="fa-solid fa-circle-check"></i> Hybrid systems paired with gas furnace backup</li><li><i class="fa-solid fa-circle-check"></i> Cold-climate heat pumps rated for Ontario winters</li></ul><p>Not sure which is right for you? We'll assess your home and give you honest recommendations.</p></div><div class="content-image"><img src="images/ac-unit-napoleon.jpg" alt="Ductless mini-split"></div></div></div></section>
 
-    <section class="services-breakdown">
-        <div class="container">
-            <h2>Heat Pump Options</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <h3>Air Source Heat Pumps</h3>
-                    <p>The most common type. Works with your existing ductwork to heat and cool your whole home. Modern cold-climate units work efficiently even in Ontario winters.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Ductless Mini-Splits</h3>
-                    <p>Perfect for homes without ductwork, additions, or problem rooms. Individual units in each zone give you precise temperature control where you need it.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Hybrid Systems</h3>
-                    <p>Pair a heat pump with your existing furnace. The heat pump handles most of the work; the furnace kicks in only on the coldest days. Best of both worlds.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="cta"><div class="container"><h2>Interested in a Heat Pump?</h2><p>Call us for a free consultation. We'll help you understand the options and whether a heat pump makes sense for your home.</p><a href="tel:7053318117" class="cta-phone"><i class="fa-solid fa-phone"></i> 705-331-8117</a></div></section>
 
-    <section class="faq-section">
-        <div class="container">
-            <h2>Common Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>Do heat pumps work in Ontario winters?</h3>
-                    <p>Modern cold-climate heat pumps work efficiently down to -25°C or colder. They're not the heat pumps your parents might remember. The technology has come a long way.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Will a heat pump replace my furnace?</h3>
-                    <p>It can, or you can keep your furnace as backup. Many homeowners go hybrid—the heat pump handles 80-90% of heating, the furnace kicks in on the coldest days.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How much can I save on heating costs?</h3>
-                    <p>Depends on what you're replacing and your electricity rates. We'll give you realistic numbers based on your situation—not best-case marketing claims.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What rebates are available?</h3>
-                    <p>Several federal and provincial programs offer significant rebates for heat pump installations. We stay current on what's available and help with applications.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta">
-        <div class="container">
-            <h2>Curious about heat pumps?</h2>
-            <p>Free consultations. We'll tell you honestly if a heat pump makes sense for your home.</p>
-            <div class="cta-buttons">
-                <a href="tel:7053318117" class="btn btn-white">Call 705-331-8117</a>
-                <a href="contact.html" class="btn btn-outline-white">Contact Us</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">Shelswell <span>H&A</span></a>
-                    <p>Family-owned HVAC services for Orillia, Barrie, and Simcoe County. TSSA registered, fully insured, and committed to honest work.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <a href="furnace-services.html">Furnaces</a>
-                    <a href="air-conditioning.html">Air Conditioning</a>
-                    <a href="heat-pumps.html">Heat Pumps</a>
-                    <a href="water-heaters.html">Water Heaters</a>
-                    <a href="gas-fireplaces.html">Gas Fireplaces</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Service Areas</h4>
-                    <a href="orillia-hvac.html">Orillia</a>
-                    <a href="barrie-hvac.html">Barrie</a>
-                    <a href="oro-medonte-hvac.html">Oro-Medonte</a>
-                    <a href="severn-hvac.html">Severn</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <a href="tel:7053318117">705-331-8117</a>
-                    <span style="color: rgba(255,255,255,0.7); font-size: 0.95rem;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b6c2cfc4d3daf6c5ded3dac5c1d3dadadec0d7d598d5d9db">[email&#160;protected]</a></span>
-                    <span style="color: rgba(255,255,255,0.7); font-size: 0.95rem;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9df7f2eef4fcf5ddeef5f8f1eeeaf8f1f1f5ebfcfeb3fef2f0">[email&#160;protected]</a></span>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2025 Shelswell Heating & Air. All rights reserved.</span>
-                <span>51 Ward Ave, Oro-Medonte, ON</span>
-            </div>
-        </div>
-    </footer>
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></scri
+    <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="logo">Shelswell <span>H&A</span></a><p>Family-owned HVAC services for Orillia, Barrie, and Simcoe County. TSSA registered, fully insured.</p></div><div class="footer-col"><h4>Services</h4><a href="furnace-services.html">Furnaces</a><a href="air-conditioning.html">Air Conditioning</a><a href="heat-pumps.html">Heat Pumps</a><a href="water-heaters.html">Water Heaters</a><a href="gas-fireplaces.html">Gas Fireplaces</a></div><div class="footer-col"><h4>Service Areas</h4><a href="orillia-hvac.html">Orillia</a><a href="barrie-hvac.html">Barrie</a><a href="oro-medonte-hvac.html">Oro-Medonte</a><a href="severn-hvac.html">Severn</a></div><div class="footer-col"><h4>Contact</h4><a href="tel:7053318117">705-331-8117</a><span style="color: rgba(255,255,255,0.6); font-size: 0.95rem; display: block; margin-bottom: 12px;">tyrel@shelswellhvac.com</span><span style="color: rgba(255,255,255,0.6); font-size: 0.95rem; display: block;">josiah@shelswellhvac.com</span></div></div><div class="footer-bottom"><span>&copy; 2025 Shelswell Heating & Air. All rights reserved.</span><span>51 Ward Ave, Oro-Medonte, ON</span></div></div></footer>
+    <script>const header=document.querySelector('header');window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.s

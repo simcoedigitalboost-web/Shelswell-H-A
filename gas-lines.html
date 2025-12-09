@@ -3,296 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gas Line Installation Orillia | BBQ, Pool Heater, Range | Shelswell Heating & Air</title>
-    <meta name="description" content="Gas line installation in Orillia, Barrie & Simcoe County. BBQ hookups, pool heaters, gas ranges, dryers. Licensed gas technicians. Call 705-331-8117.">
+    <title>Gas Line Installation Orillia | BBQ, Pool Heater, Generator | Shelswell H&A</title>
+    <meta name="description" content="Gas line installation for BBQs, pool heaters, generators and more in Orillia, Barrie & Simcoe County. TSSA licensed. Call 705-331-8117.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root { --navy: #1a2744; --navy-light: #2a3a5c; --warm-white: #faf9f7; --cream: #f5f3ef; --amber: #d97706; --amber-light: #fbbf24; --rust: #c2410c; --text: #1f2937; --text-light: #6b7280; }
+        :root { --navy: #1a2744; --navy-light: #2a3a5c; --navy-dark: #111827; --warm-white: #faf9f7; --cream: #f5f3ef; --amber: #d97706; --amber-light: #fbbf24; --text: #1f2937; --text-light: #6b7280; --gradient-warm: linear-gradient(135deg, #d97706 0%, #ea580c 100%); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
         body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm-white); line-height: 1.6; }
-        h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 700; line-height: 1.2; }
+        h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 700; line-height: 1.15; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        header { background: var(--navy); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
-        .header-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        header { background: var(--navy); padding: 16px 0; position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+        header.scrolled { background: rgba(26, 39, 68, 0.98); backdrop-filter: blur(10px); }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
         .logo { color: white; font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; text-decoration: none; }
         .logo span { color: var(--amber); }
-        nav { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-        nav a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 16px; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
-        nav a:hover { color: var(--amber-light); }
-        .nav-cta { background: var(--amber); color: white !important; border-radius: 6px; font-weight: 600; }
-        .nav-cta:hover { background: var(--rust); }
-
-        
-        /* Dropdown Menu */
+        nav { display: flex; gap: 8px; align-items: center; }
+        nav > a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 16px; font-size: 0.95rem; font-weight: 500; }
+        .nav-cta { background: var(--gradient-warm); color: white !important; border-radius: 50px; padding: 10px 24px !important; font-weight: 600; }
         .nav-dropdown { position: relative; }
-        .nav-dropdown-trigger { display: flex; align-items: center; gap: 4px; color: rgba(255,255,255,0.85); padding: 8px 16px; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: color 0.2s; }
-        .nav-dropdown-trigger::after { content: ''; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; margin-left: 4px; }
-        .nav-dropdown:hover .nav-dropdown-trigger { color: var(--amber-light); }
-        .nav-dropdown-menu { position: absolute; top: 100%; left: 0; background: white; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); min-width: 200px; padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; z-index: 200; }
-        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .nav-dropdown-menu a { display: block; padding: 10px 20px; color: #1f2937; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
-        .nav-dropdown-menu a:hover { background: #f5f3ef; color: #1a2744; }
-
-        /* Mobile Menu */
-        .mobile-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 1001; }
-        .mobile-toggle span { display: block; width: 100%; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; }
-        .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .mobile-toggle.active span:nth-child(2) { opacity: 0; }
-        .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-        .mobile-menu-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--navy); z-index: 1000; flex-direction: column; justify-content: center; align-items: center; gap: 8px; }
+        .nav-dropdown-trigger { display: flex; align-items: center; color: rgba(255,255,255,0.85); padding: 8px 16px; font-size: 0.95rem; cursor: pointer; }
+        .nav-dropdown-trigger::after { content: ''; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; margin-left: 6px; }
+        .nav-dropdown-menu { position: absolute; top: 100%; left: 0; background: white; border-radius: 12px; box-shadow: 0 15px 50px rgba(0,0,0,0.15); min-width: 220px; padding: 12px 0; opacity: 0; visibility: hidden; transition: all 0.3s; }
+        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; }
+        .nav-dropdown-menu a { display: block; padding: 12px 24px; color: var(--text); text-decoration: none; }
+        .nav-dropdown-menu a:hover { background: var(--cream); }
+        .mobile-toggle { display: none; flex-direction: column; gap: 5px; width: 32px; height: 32px; background: none; border: none; cursor: pointer; }
+        .mobile-toggle span { display: block; width: 100%; height: 2px; background: white; }
+        .mobile-menu-overlay { display: none; position: fixed; inset: 0; background: var(--navy-dark); z-index: 1000; flex-direction: column; justify-content: center; align-items: center; }
         .mobile-menu-overlay.active { display: flex; }
-        .mobile-menu-overlay a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: 500; padding: 16px 32px; transition: color 0.2s; }
-        .mobile-menu-overlay a:hover { color: var(--amber-light); }
-        .mobile-menu-overlay .nav-cta { margin-top: 16px; background: var(--amber); border-radius: 8px; font-size: 1.25rem; }
-        .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); padding: 80px 0; }
-        .page-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .page-hero h1 { color: white; font-size: clamp(2.25rem, 4.5vw, 3.25rem); margin-bottom: 20px; }
+        .mobile-menu-overlay a { color: white; text-decoration: none; font-size: 1.5rem; padding: 16px; }
+        .page-hero { background: var(--navy-dark); padding: 140px 0 80px; position: relative; }
+        .page-hero::before { content: ''; position: absolute; inset: 0; background: url('images/gas-meter.jpg') center/cover; opacity: 0.15; }
+        .page-hero-content { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .page-hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); color: white; margin-bottom: 20px; }
         .page-hero h1 span { color: var(--amber-light); }
-        .page-hero p { color: rgba(255,255,255,0.85); font-size: 1.15rem; margin-bottom: 28px; }
-        .page-hero-image img { width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1rem; transition: all 0.2s; }
-        .btn-primary { background: var(--amber); color: white; }
-        .btn-primary:hover { background: var(--rust); transform: translateY(-2px); }
-        .content-section { padding: 80px 0; }
-        .content-section:nth-child(even) { background: var(--cream); }
+        .page-hero p { color: rgba(255,255,255,0.8); font-size: 1.15rem; margin-bottom: 32px; }
+        .page-hero-image img { width: 100%; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+        .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; border-radius: 50px; font-weight: 600; text-decoration: none; }
+        .btn-primary { background: var(--gradient-warm); color: white; }
+        .services-section { padding: 80px 0; background: var(--navy); }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+        .section-label { display: inline-block; background: rgba(217, 119, 6, 0.15); color: var(--amber-light); padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 20px; }
+        .section-header h2 { font-size: clamp(2rem, 4vw, 2.75rem); color: white; margin-bottom: 16px; }
+        .section-header p { color: rgba(255,255,255,0.7); }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .service-card { background: var(--navy-light); border-radius: 20px; padding: 36px 28px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s; }
+        .service-card:hover { transform: translateY(-8px); }
+        .service-icon { width: 70px; height: 70px; background: rgba(217, 119, 6, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
+        .service-icon i { font-size: 1.75rem; color: var(--amber); }
+        .service-card h3 { font-size: 1.35rem; color: white; margin-bottom: 12px; }
+        .service-card p { color: rgba(255,255,255,0.7); }
+        .content-section { padding: 80px 0; background: var(--cream); }
+        .content-section.alt { background: var(--navy); }
         .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .content-grid.reverse { direction: rtl; }
         .content-grid.reverse > * { direction: ltr; }
-        .content-text h2 { font-size: clamp(1.75rem, 3.5vw, 2.25rem); color: var(--navy); margin-bottom: 20px; }
-        .content-text p { color: var(--text-light); font-size: 1.05rem; margin-bottom: 16px; }
+        .content-text h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); color: var(--navy); margin-bottom: 20px; }
+        .content-section.alt .content-text h2 { color: white; }
+        .content-section.alt .content-text h2 span { color: var(--amber-light); }
+        .content-text p { color: var(--text-light); margin-bottom: 16px; }
+        .content-section.alt .content-text p { color: rgba(255,255,255,0.75); }
         .content-text ul { list-style: none; margin: 24px 0; }
-        .content-text ul li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; color: var(--text); }
-        .content-text ul li::before { content: '✓'; color: var(--amber); font-weight: bold; flex-shrink: 0; }
-        .content-image img { width: 100%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
-        .services-breakdown { padding: 80px 0; }
-        .services-breakdown h2 { text-align: center; font-size: clamp(1.75rem, 3.5vw, 2.25rem); color: var(--navy); margin-bottom: 48px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-        .service-item { background: white; padding: 32px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.06); }
-        .service-item h3 { font-size: 1.25rem; color: var(--navy); margin-bottom: 12px; }
-        .service-item p { color: var(--text-light); font-size: 0.95rem; }
-        .faq-section { padding: 80px 0; background: var(--cream); }
-        .faq-section h2 { text-align: center; font-size: clamp(1.75rem, 3.5vw, 2.25rem); color: var(--navy); margin-bottom: 48px; }
-        .faq-grid { max-width: 800px; margin: 0 auto; }
-        .faq-item { background: white; padding: 24px 32px; border-radius: 12px; margin-bottom: 16px; }
-        .faq-item h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 12px; }
-        .faq-item p { color: var(--text-light); font-size: 0.95rem; }
-        .cta { padding: 80px 0; background: linear-gradient(135deg, var(--amber) 0%, var(--rust) 100%); text-align: center; }
-        .cta h2 { color: white; font-size: clamp(1.75rem, 3.5vw, 2.5rem); margin-bottom: 16px; }
-        .cta p { color: rgba(255,255,255,0.9); font-size: 1.15rem; margin-bottom: 28px; }
-        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-        .btn-white { background: white; color: var(--navy); }
-        .btn-white:hover { background: var(--cream); transform: translateY(-2px); }
-        .btn-outline-white { background: transparent; color: white; border: 2px solid white; }
-        .btn-outline-white:hover { background: rgba(255,255,255,0.1); }
-        footer { background: var(--navy); color: white; padding: 60px 0 30px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-        .footer-brand p { color: rgba(255,255,255,0.7); margin-top: 16px; font-size: 0.95rem; }
-        .footer-col h4 { font-size: 1rem; margin-bottom: 20px; color: var(--amber-light); }
-        .footer-col a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 12px; font-size: 0.95rem; transition: color 0.2s; }
-        .footer-col a:hover { color: white; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.9rem; color: rgba(255,255,255,0.6); }
-        @media (max-width: 968px) { .page-hero-grid, .content-grid { grid-template-columns: 1fr; gap: 40px; } .content-grid.reverse { direction: ltr; } .page-hero-image { order: -1; } .footer-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 640px) { .header-inner { justify-content: space-between; } nav { display: none; }
-            .mobile-toggle { display: flex; } .footer-grid { grid-template-columns: 1fr; text-align: center; } .footer-bottom { justify-content: center; text-align: center; } }
+        .content-text ul li { display: flex; gap: 12px; margin-bottom: 12px; }
+        .content-section.alt .content-text ul li { color: rgba(255,255,255,0.85); }
+        .content-text ul li i { color: var(--amber); margin-top: 4px; }
+        .content-image img { width: 100%; border-radius: 20px; }
+        .cta { padding: 80px 0; background: var(--navy-dark); text-align: center; }
+        .cta h2 { font-size: clamp(2rem, 4vw, 2.75rem); color: white; margin-bottom: 16px; }
+        .cta p { color: rgba(255,255,255,0.7); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-phone { font-size: 1.75rem; color: var(--amber-light); font-family: 'Fraunces', serif; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 12px; }
+        footer { background: var(--navy-dark); color: white; padding: 60px 0 24px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand p { color: rgba(255,255,255,0.6); margin-top: 16px; }
+        .footer-col h4 { margin-bottom: 20px; color: var(--amber-light); }
+        .footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; margin-bottom: 12px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+        @media (max-width: 1024px) { .page-hero-content, .content-grid { grid-template-columns: 1fr; } .page-hero-image { display: none; } .content-grid.reverse { direction: ltr; } }
+        @media (max-width: 768px) { .services-grid, .footer-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 640px) { nav { display: none; } .mobile-toggle { display: flex; } .page-hero { padding: 120px 0 60px; } }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-inner">
-                <a href="index.html" class="logo">Shelswell <span>H&A</span></a>
-                <nav>
-                    <a href="index.html">Home</a>
-                    <div class="nav-dropdown">
-                        <span class="nav-dropdown-trigger">Services</span>
-                        <div class="nav-dropdown-menu">
-                            <a href="furnace-services.html">Furnaces</a>
-                            <a href="air-conditioning.html">Air Conditioning</a>
-                            <a href="heat-pumps.html">Heat Pumps</a>
-                            <a href="water-heaters.html">Water Heaters</a>
-                            <a href="gas-fireplaces.html">Gas Fireplaces</a>
-                            <a href="gas-lines.html">Gas Lines</a>
-                        </div>
-                    </div>
-                    <a href="index.html#about">About</a>
-                    <div class="nav-dropdown">
-                        <span class="nav-dropdown-trigger">Service Area</span>
-                        <div class="nav-dropdown-menu">
-                            <a href="orillia-hvac.html">Orillia</a>
-                            <a href="barrie-hvac.html">Barrie</a>
-                            <a href="oro-medonte-hvac.html">Oro-Medonte</a>
-                            <a href="severn-hvac.html">Severn</a>
-                        </div>
-                    </div>
-                    <a href="contact.html">Contact</a>
-                    <a href="tel:7053318117" class="nav-cta">705-331-8117</a>
-                </nav>
-                <button class="mobile-toggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
+    <header><div class="container"><div class="header-inner"><a href="index.html" class="logo">Shelswell <span>H&A</span></a><nav><a href="index.html">Home</a><div class="nav-dropdown"><span class="nav-dropdown-trigger">Services</span><div class="nav-dropdown-menu"><a href="furnace-services.html">Furnaces</a><a href="air-conditioning.html">Air Conditioning</a><a href="heat-pumps.html">Heat Pumps</a><a href="water-heaters.html">Water Heaters</a><a href="gas-fireplaces.html">Gas Fireplaces</a><a href="gas-lines.html">Gas Lines</a></div></div><a href="index.html#about">About</a><div class="nav-dropdown"><span class="nav-dropdown-trigger">Service Area</span><div class="nav-dropdown-menu"><a href="orillia-hvac.html">Orillia</a><a href="barrie-hvac.html">Barrie</a><a href="oro-medonte-hvac.html">Oro-Medonte</a><a href="severn-hvac.html">Severn</a></div></div><a href="contact.html">Contact</a><a href="tel:7053318117" class="nav-cta">705-331-8117</a></nav><button class="mobile-toggle"><span></span><span></span><span></span></button></div></div></header>
+    <div class="mobile-menu-overlay"><a href="index.html">Home</a><a href="furnace-services.html">Furnaces</a><a href="air-conditioning.html">Air Conditioning</a><a href="heat-pumps.html">Heat Pumps</a><a href="water-heaters.html">Water Heaters</a><a href="gas-fireplaces.html">Gas Fireplaces</a><a href="gas-lines.html">Gas Lines</a><a href="contact.html">Contact</a><a href="tel:7053318117" class="nav-cta">705-331-8117</a></div>
 
-    <div class="mobile-menu-overlay">
-        <a href="index.html">Home</a>
-        <a href="furnace-services.html">Furnaces</a>
-        <a href="air-conditioning.html">Air Conditioning</a>
-        <a href="heat-pumps.html">Heat Pumps</a>
-        <a href="water-heaters.html">Water Heaters</a>
-        <a href="gas-fireplaces.html">Gas Fireplaces</a>
-        <a href="gas-lines.html">Gas Lines</a>
-        <a href="index.html#about">About</a>
-        <a href="orillia-hvac.html">Orillia</a>
-        <a href="barrie-hvac.html">Barrie</a>
-        <a href="oro-medonte-hvac.html">Oro-Medonte</a>
-        <a href="severn-hvac.html">Severn</a>
-        <a href="contact.html">Contact</a>
-        <a href="tel:7053318117" class="nav-cta">705-331-8117</a>
-    </div>
+    <section class="page-hero"><div class="container"><div class="page-hero-content"><div><h1>Gas <span>Lines</span></h1><p>Safe, professional gas line installation for BBQs, pool heaters, generators, and more. TSSA licensed technicians serving Simcoe County.</p><a href="tel:7053318117" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call 705-331-8117</a></div><div class="page-hero-image"><img src="images/gas-meter.jpg" alt="Gas line installation"></div></div></div></section>
 
-    <section class="page-hero">
-        <div class="container">
-            <div class="page-hero-grid">
-                <div class="page-hero-content">
-                    <h1>Gas Line Installation: <span>Done Right</span></h1>
-                    <p>BBQ hookups, pool heaters, gas ranges, outdoor kitchens—gas line work requires a licensed technician. We're TSSA registered and do it properly the first time.</p>
-                    <a href="tel:7053318117" class="btn btn-primary">Call 705-331-8117</a>
-                </div>
-                <div class="page-hero-image">
-                    <img src="images/gas-meter.jpg" alt="Gas meter and line installation">
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="services-section"><div class="container"><div class="section-header"><span class="section-label">What We Offer</span><h2>Gas Line Services</h2><p>Professional gas line installation and service for residential applications.</p></div><div class="services-grid"><div class="service-card"><div class="service-icon"><i class="fa-solid fa-fire-burner"></i></div><h3>BBQ Gas Lines</h3><p>Never run out of propane again. We run permanent natural gas lines to your outdoor grill.</p></div><div class="service-card"><div class="service-icon"><i class="fa-solid fa-water-ladder"></i></div><h3>Pool Heaters</h3><p>Gas lines for pool and hot tub heaters. Extend your swimming season with reliable heat.</p></div><div class="service-card"><div class="service-icon"><i class="fa-solid fa-bolt"></i></div><h3>Generators</h3><p>Natural gas connections for standby generators. Automatic backup power when you need it.</p></div></div></div></section>
 
-    <section class="content-section">
-        <div class="container">
-            <div class="content-grid">
-                <div class="content-text">
-                    <h2>Why proper installation matters</h2>
-                    <p>Gas work isn't a DIY project. Improper installations can leak, corrode, or fail to deliver adequate pressure to your appliances. More importantly, gas leaks are dangerous.</p>
-                    <p>We're TSSA registered gas technicians. We pull permits, use the right materials, pressure test every line, and make sure your installation is safe and code-compliant.</p>
-                    <ul>
-                        <li>TSSA registered and insured</li>
-                        <li>Proper sizing for your appliances</li>
-                        <li>Pressure testing on every job</li>
-                        <li>Permits pulled when required</li>
-                    </ul>
-                </div>
-                <div class="content-image">
-                    <img src="images/team-together.jpg" alt="Shelswell Heating & Air team">
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="content-section"><div class="container"><div class="content-grid"><div class="content-text"><h2>Gas Lines We Install</h2><p>We handle gas line installations for a variety of residential applications:</p><ul><li><i class="fa-solid fa-circle-check"></i> Natural gas BBQ connections</li><li><i class="fa-solid fa-circle-check"></i> Pool and spa heaters</li><li><i class="fa-solid fa-circle-check"></i> Standby generators</li><li><i class="fa-solid fa-circle-check"></i> Outdoor fire pits and fire tables</li><li><i class="fa-solid fa-circle-check"></i> Patio heaters</li><li><i class="fa-solid fa-circle-check"></i> Gas dryers and ranges</li></ul><p>All work is performed by TSSA licensed technicians and inspected to code.</p></div><div class="content-image"><img src="images/gas-meter.jpg" alt="Gas meter and line"></div></div></div></section>
 
-    <section class="services-breakdown">
-        <div class="container">
-            <h2>Gas Line Services</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <h3>BBQ Gas Hookups</h3>
-                    <p>No more propane tanks to refill. We'll run a natural gas line to your deck or patio so you can grill anytime without worrying about running out.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Pool & Hot Tub Heaters</h3>
-                    <p>Gas pool heaters warm your water faster than electric. We install the heater and run the gas line—everything you need to extend your swim season.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Gas Ranges & Cooktops</h3>
-                    <p>Switching from electric to gas in your kitchen? We'll run the line and make sure you have adequate pressure for your new range.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Gas Dryers</h3>
-                    <p>Gas dryers are more efficient than electric. If you're making the switch, we'll install the gas line safely and properly.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Outdoor Kitchens</h3>
-                    <p>Building an outdoor kitchen with multiple gas appliances? We'll design and install a gas system that handles everything you need.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Generator Hookups</h3>
-                    <p>Natural gas generators keep running as long as your gas supply does. We install the gas connections for standby generators.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="content-section alt"><div class="container"><div class="content-grid reverse"><div class="content-text"><h2">Why Go With <span>Natural Gas?</span></h2><p>Natural gas offers several advantages over propane tanks:</p><ul><li><i class="fa-solid fa-circle-check"></i> Never run out mid-cookout or pool party</li><li><i class="fa-solid fa-circle-check"></i> Lower cost per BTU than propane</li><li><i class="fa-solid fa-circle-check"></i> No tank refills or exchanges</li><li><i class="fa-solid fa-circle-check"></i> Cleaner burning fuel</li><li><i class="fa-solid fa-circle-check"></i> Increases property value</li></ul><p>We handle all permits and inspections so you can enjoy the convenience worry-free.</p></div><div class="content-image"><img src="images/gas-meter.jpg" alt="Natural gas connection"></div></div></div></section>
 
-    <section class="faq-section">
-        <div class="container">
-            <h2>Common Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>Do I need a permit for gas line work?</h3>
-                    <p>In most cases, yes. We handle the permit process and make sure everything is inspected and approved. That's part of doing it right.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How much does a BBQ gas line cost?</h3>
-                    <p>Depends on the distance from your meter and any obstacles in the way. We'll come out, look at your setup, and give you a firm quote.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Can my existing gas supply handle another appliance?</h3>
-                    <p>Maybe. We'll check your meter capacity and existing load. If you need a meter upgrade, we can coordinate with Enbridge.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How long does a gas line installation take?</h3>
-                    <p>Most residential jobs take half a day to a full day. Larger projects like outdoor kitchens with multiple appliances take longer.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="cta"><div class="container"><h2>Need a Gas Line Installed?</h2><p>From BBQ hookups to generator connections, we handle it all. Call for a free estimate.</p><a href="tel:7053318117" class="cta-phone"><i class="fa-solid fa-phone"></i> 705-331-8117</a></div></section>
 
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to run gas?</h2>
-            <p>Free quotes on all gas line installations.</p>
-            <div class="cta-buttons">
-                <a href="tel:7053318117" class="btn btn-white">Call 705-331-8117</a>
-                <a href="contact.html" class="btn btn-outline-white">Contact Us</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">Shelswell <span>H&A</span></a>
-                    <p>Family-owned HVAC services for Orillia, Barrie, and Simcoe County. TSSA registered, fully insured, and committed to honest work.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <a href="furnace-services.html">Furnaces</a>
-                    <a href="air-conditioning.html">Air Conditioning</a>
-                    <a href="heat-pumps.html">Heat Pumps</a>
-                    <a href="water-heaters.html">Water Heaters</a>
-                    <a href="gas-fireplaces.html">Gas Fireplaces</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Service Areas</h4>
-                    <a href="orillia-hvac.html">Orillia</a>
-                    <a href="barrie-hvac.html">Barrie</a>
-                    <a href="oro-medonte-hvac.html">Oro-Medonte</a>
-                    <a href="severn-hvac.html">Severn</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <a href="tel:7053318117">705-331-8117</a>
-                    <span style="color: rgba(255,255,255,0.7); font-size: 0.95rem;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="65111c17000925160d000916120009090d1304064b060a08">[email&#160;protected]</a></span>
-                    <span style="color: rgba(255,255,255,0.7); font-size: 0.95rem;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ee84819d878f86ae9d868b829d998b828286988f8dc08d8183">[email&#160;protected]</a></span>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2025 Shelswell Heating & Air. All rights reserved.</span>
-                <span>51 Ward Ave, Oro-Medonte, ON</span>
-            </div>
-        </div>
-    </footer>
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></scri
+    <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="logo">Shelswell <span>H&A</span></a><p>Family-owned HVAC services for Orillia, Barrie, and Simcoe County.</p></div><div class="footer-col"><h4>Services</h4><a href="furnace-services.html">Furnaces</a><a href="air-conditioning.html">Air Conditioning</a><a href="heat-pumps.html">Heat Pumps</a><a href="water-heaters.html">Water Heaters</a><a href="gas-fireplaces.html">Gas Fireplaces</a></div><div class="footer-col"><h4>Service Areas</h4><a href="orillia-hvac.html">Orillia</a><a href="barrie-hvac.html">Barrie</a><a href="oro-medonte-hvac.html">Oro-Medonte</a><a href="severn-hvac.html">Severn</a></div><div class="footer-col"><h4>Contact</h4><a href="tel:7053318117">705-331-8117</a><span style="color:rgba(255,255,255,0.6);display:block;margin-bottom:12px;">tyrel@shelswellhvac.com</span><span style="color:rgba(255,255,255,0.6);display:block;">josiah@shelswellhvac.com</span></div></div><div class="footer-bottom"><span>&copy; 2025 Shelswell Heating & Air.</span><span>51 Ward Ave, Oro-Medonte, ON</spa

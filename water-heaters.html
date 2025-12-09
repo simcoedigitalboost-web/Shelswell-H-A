@@ -3,305 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Heater Installation Orillia | Tank & Tankless | Shelswell Heating & Air</title>
-    <meta name="description" content="Water heater installation and repair in Orillia, Barrie & Simcoe County. Tank and tankless options. No more cold showers. TSSA registered. Call 705-331-8117.">
+    <title>Water Heater Installation Orillia | Tank & Tankless | Shelswell H&A</title>
+    <meta name="description" content="Water heater installation and repair in Orillia, Barrie & Simcoe County. Tank and tankless options. TSSA registered. Call 705-331-8117.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root { --navy: #1a2744; --navy-light: #2a3a5c; --warm-white: #faf9f7; --cream: #f5f3ef; --amber: #d97706; --amber-light: #fbbf24; --rust: #c2410c; --text: #1f2937; --text-light: #6b7280; }
+        :root { --navy: #1a2744; --navy-light: #2a3a5c; --navy-dark: #111827; --warm-white: #faf9f7; --cream: #f5f3ef; --amber: #d97706; --amber-light: #fbbf24; --text: #1f2937; --text-light: #6b7280; --gradient-warm: linear-gradient(135deg, #d97706 0%, #ea580c 100%); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm-white); line-height: 1.6; }
-        h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 700; line-height: 1.2; }
+        h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 700; line-height: 1.15; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        header { background: var(--navy); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
-        .header-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        header { background: var(--navy); padding: 16px 0; position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+        header.scrolled { background: rgba(26, 39, 68, 0.98); backdrop-filter: blur(10px); }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
         .logo { color: white; font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; text-decoration: none; }
         .logo span { color: var(--amber); }
-        nav { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-        nav a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 16px; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
-        nav a:hover { color: var(--amber-light); }
-        .nav-cta { background: var(--amber); color: white !important; border-radius: 6px; font-weight: 600; }
-        .nav-cta:hover { background: var(--rust); }
-
-        
-        /* Dropdown Menu */
+        nav { display: flex; gap: 8px; align-items: center; }
+        nav > a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 16px; font-size: 0.95rem; font-weight: 500; }
+        nav > a:hover { color: var(--amber-light); }
+        .nav-cta { background: var(--gradient-warm); color: white !important; border-radius: 50px; padding: 10px 24px !important; font-weight: 600; }
         .nav-dropdown { position: relative; }
-        .nav-dropdown-trigger { display: flex; align-items: center; gap: 4px; color: rgba(255,255,255,0.85); padding: 8px 16px; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: color 0.2s; }
+        .nav-dropdown-trigger { display: flex; align-items: center; gap: 4px; color: rgba(255,255,255,0.85); padding: 8px 16px; font-size: 0.95rem; font-weight: 500; cursor: pointer; }
         .nav-dropdown-trigger::after { content: ''; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; margin-left: 4px; }
-        .nav-dropdown:hover .nav-dropdown-trigger { color: var(--amber-light); }
-        .nav-dropdown-menu { position: absolute; top: 100%; left: 0; background: white; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); min-width: 200px; padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; z-index: 200; }
-        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .nav-dropdown-menu a { display: block; padding: 10px 20px; color: #1f2937; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
-        .nav-dropdown-menu a:hover { background: #f5f3ef; color: #1a2744; }
-
-        /* Mobile Menu */
-        .mobile-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 1001; }
-        .mobile-toggle span { display: block; width: 100%; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; }
-        .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .mobile-toggle.active span:nth-child(2) { opacity: 0; }
-        .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-        .mobile-menu-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--navy); z-index: 1000; flex-direction: column; justify-content: center; align-items: center; gap: 8px; }
+        .nav-dropdown-menu { position: absolute; top: 100%; left: 0; background: white; border-radius: 12px; box-shadow: 0 15px 50px rgba(0,0,0,0.15); min-width: 220px; padding: 12px 0; opacity: 0; visibility: hidden; transition: all 0.3s; z-index: 200; }
+        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; }
+        .nav-dropdown-menu a { display: block; padding: 12px 24px; color: var(--text); text-decoration: none; }
+        .nav-dropdown-menu a:hover { background: var(--cream); }
+        .mobile-toggle { display: none; flex-direction: column; gap: 5px; width: 32px; height: 32px; background: none; border: none; cursor: pointer; }
+        .mobile-toggle span { display: block; width: 100%; height: 2px; background: white; }
+        .mobile-menu-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--navy-dark); z-index: 1000; flex-direction: column; justify-content: center; align-items: center; }
         .mobile-menu-overlay.active { display: flex; }
-        .mobile-menu-overlay a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: 500; padding: 16px 32px; transition: color 0.2s; }
-        .mobile-menu-overlay a:hover { color: var(--amber-light); }
-        .mobile-menu-overlay .nav-cta { margin-top: 16px; background: var(--amber); border-radius: 8px; font-size: 1.25rem; }
-        .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); padding: 80px 0; }
-        .page-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .page-hero h1 { color: white; font-size: clamp(2.25rem, 4.5vw, 3.25rem); margin-bottom: 20px; }
+        .mobile-menu-overlay a { color: white; text-decoration: none; font-size: 1.5rem; padding: 16px 32px; }
+        .page-hero { background: var(--navy-dark); padding: 140px 0 80px; position: relative; }
+        .page-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('images/water-heater-tank.jpg') center/cover; opacity: 0.15; }
+        .page-hero-content { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .page-hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); color: white; margin-bottom: 20px; }
         .page-hero h1 span { color: var(--amber-light); }
-        .page-hero p { color: rgba(255,255,255,0.85); font-size: 1.15rem; margin-bottom: 28px; }
-        .page-hero-image img { width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1rem; transition: all 0.2s; }
-        .btn-primary { background: var(--amber); color: white; }
-        .btn-primary:hover { background: var(--rust); transform: translateY(-2px); }
-        .content-section { padding: 80px 0; }
-        .content-section:nth-child(even) { background: var(--cream); }
+        .page-hero p { color: rgba(255,255,255,0.8); font-size: 1.15rem; margin-bottom: 32px; }
+        .page-hero-image img { width: 100%; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+        .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; border-radius: 50px; font-weight: 600; text-decoration: none; }
+        .btn-primary { background: var(--gradient-warm); color: white; }
+        .services-section { padding: 80px 0; background: var(--navy); }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+        .section-label { display: inline-block; background: rgba(217, 119, 6, 0.15); color: var(--amber-light); padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 20px; }
+        .section-header h2 { font-size: clamp(2rem, 4vw, 2.75rem); color: white; margin-bottom: 16px; }
+        .section-header p { color: rgba(255,255,255,0.7); }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .service-card { background: var(--navy-light); border-radius: 20px; padding: 36px 28px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        .service-icon { width: 70px; height: 70px; background: rgba(217, 119, 6, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
+        .service-icon i { font-size: 1.75rem; color: var(--amber); }
+        .service-card h3 { font-size: 1.35rem; color: white; margin-bottom: 12px; }
+        .service-card p { color: rgba(255,255,255,0.7); }
+        .content-section { padding: 80px 0; background: var(--cream); }
+        .content-section.alt { background: var(--navy); }
         .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .content-grid.reverse { direction: rtl; }
         .content-grid.reverse > * { direction: ltr; }
-        .content-text h2 { font-size: clamp(1.75rem, 3.5vw, 2.25rem); color: var(--navy); margin-bottom: 20px; }
-        .content-text p { color: var(--text-light); font-size: 1.05rem; margin-bottom: 16px; }
+        .content-text h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); color: var(--navy); margin-bottom: 20px; }
+        .content-section.alt .content-text h2 { color: white; }
+        .content-section.alt .content-text h2 span { color: var(--amber-light); }
+        .content-text p { color: var(--text-light); margin-bottom: 16px; }
+        .content-section.alt .content-text p { color: rgba(255,255,255,0.75); }
         .content-text ul { list-style: none; margin: 24px 0; }
-        .content-text ul li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; color: var(--text); }
-        .content-text ul li::before { content: '✓'; color: var(--amber); font-weight: bold; flex-shrink: 0; }
-        .content-image img { width: 100%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
-        .services-breakdown { padding: 80px 0; }
-        .services-breakdown h2 { text-align: center; font-size: clamp(1.75rem, 3.5vw, 2.25rem); color: var(--navy); margin-bottom: 48px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .service-item { background: white; padding: 32px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.06); }
-        .service-item h3 { font-size: 1.25rem; color: var(--navy); margin-bottom: 12px; }
-        .service-item p { color: var(--text-light); font-size: 0.95rem; }
-        .faq-section { padding: 80px 0; background: var(--cream); }
-        .faq-section h2 { text-align: center; font-size: clamp(1.75rem, 3.5vw, 2.25rem); color: var(--navy); margin-bottom: 48px; }
-        .faq-grid { max-width: 800px; margin: 0 auto; }
-        .faq-item { background: white; padding: 24px 32px; border-radius: 12px; margin-bottom: 16px; }
-        .faq-item h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 12px; }
-        .faq-item p { color: var(--text-light); font-size: 0.95rem; }
-        .cta { padding: 80px 0; background: linear-gradient(135deg, var(--amber) 0%, var(--rust) 100%); text-align: center; }
-        .cta h2 { color: white; font-size: clamp(1.75rem, 3.5vw, 2.5rem); margin-bottom: 16px; }
-        .cta p { color: rgba(255,255,255,0.9); font-size: 1.15rem; margin-bottom: 28px; }
-        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-        .btn-white { background: white; color: var(--navy); }
-        .btn-white:hover { background: var(--cream); transform: translateY(-2px); }
-        .btn-outline-white { background: transparent; color: white; border: 2px solid white; }
-        .btn-outline-white:hover { background: rgba(255,255,255,0.1); }
-        footer { background: var(--navy); color: white; padding: 60px 0 30px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-        .footer-brand p { color: rgba(255,255,255,0.7); margin-top: 16px; font-size: 0.95rem; }
-        .footer-col h4 { font-size: 1rem; margin-bottom: 20px; color: var(--amber-light); }
-        .footer-col a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 12px; font-size: 0.95rem; transition: color 0.2s; }
-        .footer-col a:hover { color: white; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.9rem; color: rgba(255,255,255,0.6); }
-        @media (max-width: 968px) { .page-hero-grid, .content-grid { grid-template-columns: 1fr; gap: 40px; } .content-grid.reverse { direction: ltr; } .page-hero-image { order: -1; } .footer-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 640px) { .header-inner { justify-content: space-between; } nav { display: none; }
-            .mobile-toggle { display: flex; } .footer-grid { grid-template-columns: 1fr; text-align: center; } .footer-bottom { justify-content: center; text-align: center; } }
+        .content-text ul li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+        .content-section.alt .content-text ul li { color: rgba(255,255,255,0.85); }
+        .content-text ul li i { color: var(--amber); margin-top: 4px; }
+        .content-image img { width: 100%; border-radius: 20px; }
+        .cta { padding: 80px 0; background: var(--navy-dark); text-align: center; }
+        .cta h2 { font-size: clamp(2rem, 4vw, 2.75rem); color: white; margin-bottom: 16px; }
+        .cta p { color: rgba(255,255,255,0.7); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-phone { display: inline-flex; align-items: center; gap: 12px; font-size: 1.75rem; color: var(--amber-light); font-family: 'Fraunces', serif; font-weight: 700; text-decoration: none; }
+        footer { background: var(--navy-dark); color: white; padding: 60px 0 24px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand p { color: rgba(255,255,255,0.6); margin-top: 16px; }
+        .footer-col h4 { margin-bottom: 20px; color: var(--amber-light); }
+        .footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; margin-bottom: 12px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+        @media (max-width: 1024px) { .page-hero-content, .content-grid { grid-template-columns: 1fr; } .page-hero-image { display: none; } .content-grid.reverse { direction: ltr; } }
+        @media (max-width: 768px) { .services-grid, .footer-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 640px) { nav { display: none; } .mobile-toggle { display: flex; } .page-hero { padding: 120px 0 60px; } }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-inner">
-                <a href="index.html" class="logo">Shelswell <span>H&A</span></a>
-                <nav>
-                    <a href="index.html">Home</a>
-                    <div class="nav-dropdown">
-                        <span class="nav-dropdown-trigger">Services</span>
-                        <div class="nav-dropdown-menu">
-                            <a href="furnace-services.html">Furnaces</a>
-                            <a href="air-conditioning.html">Air Conditioning</a>
-                            <a href="heat-pumps.html">Heat Pumps</a>
-                            <a href="water-heaters.html">Water Heaters</a>
-                            <a href="gas-fireplaces.html">Gas Fireplaces</a>
-                            <a href="gas-lines.html">Gas Lines</a>
-                        </div>
-                    </div>
-                    <a href="index.html#about">About</a>
-                    <div class="nav-dropdown">
-                        <span class="nav-dropdown-trigger">Service Area</span>
-                        <div class="nav-dropdown-menu">
-                            <a href="orillia-hvac.html">Orillia</a>
-                            <a href="barrie-hvac.html">Barrie</a>
-                            <a href="oro-medonte-hvac.html">Oro-Medonte</a>
-                            <a href="severn-hvac.html">Severn</a>
-                        </div>
-                    </div>
-                    <a href="contact.html">Contact</a>
-                    <a href="tel:7053318117" class="nav-cta">705-331-8117</a>
-                </nav>
-                <button class="mobile-toggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
+    <header><div class="container"><div class="header-inner"><a href="index.html" class="logo">Shelswell <span>H&A</span></a><nav><a href="index.html">Home</a><div class="nav-dropdown"><span class="nav-dropdown-trigger">Services</span><div class="nav-dropdown-menu"><a href="furnace-services.html">Furnaces</a><a href="air-conditioning.html">Air Conditioning</a><a href="heat-pumps.html">Heat Pumps</a><a href="water-heaters.html">Water Heaters</a><a href="gas-fireplaces.html">Gas Fireplaces</a><a href="gas-lines.html">Gas Lines</a></div></div><a href="index.html#about">About</a><div class="nav-dropdown"><span class="nav-dropdown-trigger">Service Area</span><div class="nav-dropdown-menu"><a href="orillia-hvac.html">Orillia</a><a href="barrie-hvac.html">Barrie</a><a href="oro-medonte-hvac.html">Oro-Medonte</a><a href="severn-hvac.html">Severn</a></div></div><a href="contact.html">Contact</a><a href="tel:7053318117" class="nav-cta">705-331-8117</a></nav><button class="mobile-toggle"><span></span><span></span><span></span></button></div></div></header>
+    <div class="mobile-menu-overlay"><a href="index.html">Home</a><a href="furnace-services.html">Furnaces</a><a href="air-conditioning.html">Air Conditioning</a><a href="heat-pumps.html">Heat Pumps</a><a href="water-heaters.html">Water Heaters</a><a href="gas-fireplaces.html">Gas Fireplaces</a><a href="gas-lines.html">Gas Lines</a><a href="contact.html">Contact</a><a href="tel:7053318117" class="nav-cta">705-331-8117</a></div>
 
-    <div class="mobile-menu-overlay">
-        <a href="index.html">Home</a>
-        <a href="furnace-services.html">Furnaces</a>
-        <a href="air-conditioning.html">Air Conditioning</a>
-        <a href="heat-pumps.html">Heat Pumps</a>
-        <a href="water-heaters.html">Water Heaters</a>
-        <a href="gas-fireplaces.html">Gas Fireplaces</a>
-        <a href="gas-lines.html">Gas Lines</a>
-        <a href="index.html#about">About</a>
-        <a href="orillia-hvac.html">Orillia</a>
-        <a href="barrie-hvac.html">Barrie</a>
-        <a href="oro-medonte-hvac.html">Oro-Medonte</a>
-        <a href="severn-hvac.html">Severn</a>
-        <a href="contact.html">Contact</a>
-        <a href="tel:7053318117" class="nav-cta">705-331-8117</a>
-    </div>
+    <section class="page-hero"><div class="container"><div class="page-hero-content"><div><h1>Water <span>Heaters</span></h1><p>Hot water when you need it. We install and service both traditional tank and tankless water heaters throughout Simcoe County.</p><a href="tel:7053318117" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call 705-331-8117</a></div><div class="page-hero-image"><img src="images/water-heater-tank.jpg" alt="Water heater installation"></div></div></div></section>
 
-    <section class="page-hero">
-        <div class="container">
-            <div class="page-hero-grid">
-                <div class="page-hero-content">
-                    <h1>Water Heaters: <span>Tank & Tankless</span></h1>
-                    <p>Nothing ruins a morning like a cold shower. Whether your water heater is on its last legs or you're ready to upgrade to tankless, we'll get your hot water flowing—usually the same day.</p>
-                    <a href="tel:7053318117" class="btn btn-primary">Call 705-331-8117</a>
-                </div>
-                <div class="page-hero-image">
-                    <img src="images/water-heater-tank.jpg" alt="Rheem tank water heater installation">
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="services-section"><div class="container"><div class="section-header"><span class="section-label">What We Offer</span><h2>Water Heater Services</h2><p>Installation, repair, and replacement for all types of water heaters.</p></div><div class="services-grid"><div class="service-card"><div class="service-icon"><i class="fa-solid fa-plus"></i></div><h3>Installation</h3><p>New water heater installations, whether you're building, renovating, or upgrading your existing system.</p></div><div class="service-card"><div class="service-icon"><i class="fa-solid fa-wrench"></i></div><h3>Repair</h3><p>No hot water? Leaking tank? Strange noises? We diagnose and repair water heater issues quickly.</p></div><div class="service-card"><div class="service-icon"><i class="fa-solid fa-arrows-rotate"></i></div><h3>Replacement</h3><p>When repair isn't cost-effective, we'll help you choose the right replacement for your home.</p></div></div></div></section>
 
-    <section class="content-section">
-        <div class="container">
-            <div class="content-grid">
-                <div class="content-text">
-                    <h2>Tank water heaters</h2>
-                    <p>The classic choice. Tank water heaters are reliable, affordable, and we can usually get you back in hot water the same day your old one fails.</p>
-                    <p>We install quality brands like Rheem that are built to last. Proper installation matters—the right sizing, proper venting, and code-compliant gas connections make all the difference in lifespan and efficiency.</p>
-                    <ul>
-                        <li>40, 50, and 60 gallon options</li>
-                        <li>Gas and electric models</li>
-                        <li>Same-day installation available</li>
-                        <li>Proper disposal of old unit</li>
-                    </ul>
-                </div>
-                <div class="content-image">
-                    <img src="images/furnace-basement.jpg" alt="Complete mechanical room installation">
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="content-section"><div class="container"><div class="content-grid"><div class="content-text"><h2>Tank vs Tankless: Which is Right for You?</h2><p>We install both traditional tank water heaters and modern tankless systems. Here's how they compare:</p><ul><li><i class="fa-solid fa-circle-check"></i> <strong>Tank water heaters:</strong> Lower upfront cost, reliable, good for high-demand households</li><li><i class="fa-solid fa-circle-check"></i> <strong>Tankless water heaters:</strong> Endless hot water, energy savings, space-saving design</li></ul><p>Not sure which is right for your home? We'll assess your hot water usage and give you honest recommendations based on your needs and budget.</p></div><div class="content-image"><img src="images/tankless-navien.jpg" alt="Tankless water heater"></div></div></div></section>
 
-    <section class="content-section">
-        <div class="container">
-            <div class="content-grid reverse">
-                <div class="content-text">
-                    <h2>Tankless water heaters</h2>
-                    <p>Endless hot water, lower energy bills, and a unit that takes up almost no space. Tankless water heaters heat water on demand—no tank sitting there keeping 50 gallons hot whether you need it or not.</p>
-                    <p>We install Navien and other quality tankless units. They cost more upfront, but many homeowners find the energy savings and endless hot water worth it.</p>
-                    <ul>
-                        <li>Never run out of hot water</li>
-                        <li>20+ year lifespan (vs. 10-12 for tanks)</li>
-                        <li>Wall-mounted, saves floor space</li>
-                        <li>Lower monthly energy costs</li>
-                    </ul>
-                </div>
-                <div class="content-image">
-                    <img src="images/tankless-navien.jpg" alt="Navien tankless water heater installation">
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="content-section alt"><div class="container"><div class="content-grid reverse"><div class="content-text"><h2">Signs You Need <span>Water Heater Service</span></h2><p>Watch for these warning signs that your water heater may need attention:</p><ul><li><i class="fa-solid fa-circle-check"></i> Running out of hot water faster than usual</li><li><i class="fa-solid fa-circle-check"></i> Rusty or discolored hot water</li><li><i class="fa-solid fa-circle-check"></i> Strange noises from the tank</li><li><i class="fa-solid fa-circle-check"></i> Water pooling around the base</li><li><i class="fa-solid fa-circle-check"></i> Unit is 10+ years old</li><li><i class="fa-solid fa-circle-check"></i> Increasing energy bills</li></ul></div><div class="content-image"><img src="images/water-heater-tank.jpg" alt="Tank water heater"></div></div></div></section>
 
-    <section class="services-breakdown">
-        <div class="container">
-            <h2>Our Water Heater Services</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <h3>Water Heater Replacement</h3>
-                    <p>Old tank leaking or just not keeping up? We'll remove your old unit and install a new one, usually the same day. We handle the disposal too.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Tankless Installation</h3>
-                    <p>Upgrading to tankless requires proper gas line sizing and venting. We'll assess your setup and make sure everything is done right.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Water Heater Repair</h3>
-                    <p>Sometimes a repair makes more sense than replacement. We'll diagnose the issue and give you honest options.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="cta"><div class="container"><h2>Need Water Heater Service?</h2><p>From minor repairs to full replacements, we're here to help. Call for a free estimate.</p><a href="tel:7053318117" class="cta-phone"><i class="fa-solid fa-phone"></i> 705-331-8117</a></div></section>
 
-    <section class="faq-section">
-        <div class="container">
-            <h2>Common Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>Tank or tankless—which is right for me?</h3>
-                    <p>Depends on your household size, hot water usage, and budget. Tankless costs more upfront but saves on energy. We'll help you weigh the options honestly.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How long does water heater installation take?</h3>
-                    <p>Tank replacement is typically 2-4 hours. Tankless installations take longer, especially if gas line or venting upgrades are needed—usually a full day.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>My water heater is leaking. Is it an emergency?</h3>
-                    <p>A small drip from the relief valve might not be urgent. A puddle forming underneath usually means the tank is failing—call us and we'll get there as quickly as possible.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How long do water heaters last?</h3>
-                    <p>Tank water heaters typically last 10-12 years. Tankless units can go 20+ years with proper maintenance. If yours is approaching that age, it's smart to plan ahead.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta">
-        <div class="container">
-            <h2>No hot water?</h2>
-            <p>Call now—we can usually get you running the same day.</p>
-            <div class="cta-buttons">
-                <a href="tel:7053318117" class="btn btn-white">Call 705-331-8117</a>
-                <a href="contact.html" class="btn btn-outline-white">Contact Us</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">Shelswell <span>H&A</span></a>
-                    <p>Family-owned HVAC services for Orillia, Barrie, and Simcoe County. TSSA registered, fully insured, and committed to honest work.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <a href="furnace-services.html">Furnaces</a>
-                    <a href="air-conditioning.html">Air Conditioning</a>
-                    <a href="heat-pumps.html">Heat Pumps</a>
-                    <a href="water-heaters.html">Water Heaters</a>
-                    <a href="gas-fireplaces.html">Gas Fireplaces</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Service Areas</h4>
-                    <a href="orillia-hvac.html">Orillia</a>
-                    <a href="barrie-hvac.html">Barrie</a>
-                    <a href="oro-medonte-hvac.html">Oro-Medonte</a>
-                    <a href="severn-hvac.html">Severn</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <a href="tel:7053318117">705-331-8117</a>
-                    <span style="color: rgba(255,255,255,0.7); font-size: 0.95rem;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6d19141f08012d1e0508011e1a080101051b0c0e430e0200">[email&#160;protected]</a></span>
-                    <span style="color: rgba(255,255,255,0.7); font-size: 0.95rem;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4d27223e242c250d3e2528213e3a282121253b2c2e632e2220">[email&#160;protected]</a></span>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2025 Shelswell Heating & Air. All rights reserved.</span>
-                <span>51 Ward Ave, Oro-Medonte, ON</span>
-            </div>
-        </div>
-    </footer>
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></scri
+    <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="logo">Shelswell <span>H&A</span></a><p>Family-owned HVAC services for Orillia, Barrie, and Simcoe County.</p></div><div class="footer-col"><h4>Services</h4><a href="furnace-services.html">Furnaces</a><a href="air-conditioning.html">Air Conditioning</a><a href="heat-pumps.html">Heat Pumps</a><a href="water-heaters.html">Water Heaters</a><a href="gas-fireplaces.html">Gas Fireplaces</a></div><div class="footer-col"><h4>Service Areas</h4><a href="orillia-hvac.html">Orillia</a><a href="barrie-hvac.html">Barrie</a><a href="oro-medonte-hvac.html">Oro-Medonte</a><a href="severn-hvac.html">Severn</a></div><div class="footer-col"><h4>Contact</h4><a href="tel:7053318117">705-331-8117</a><span style="color:rgba(255,255,255,0.6);display:block;margin-bottom:12px;">tyrel@shelswellhvac.com</span><span style="color:rgba(255,255,255,0.6);display:block;">josiah@shelswellhvac.com</span></div></div><div class="footer-bottom"><span>&copy; 2025 Shelswell Heating & Air.</span><span>51 Ward Ave, Oro-Medonte, ON</span></div></div></footer>
+    <s

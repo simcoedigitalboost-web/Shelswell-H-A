@@ -3,289 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HVAC Services Barrie | Furnace & AC Repair | Shelswell Heating & Air</title>
-    <meta name="description" content="HVAC services in Barrie, ON. Furnace repair, AC installation, heat pumps, water heaters & gas fireplaces. Local, family-owned, TSSA registered. Call 705-331-8117.">
+    <title>HVAC Services Barrie | Heating & Cooling | Shelswell H&A</title>
+    <meta name="description" content="Trusted HVAC services in Barrie. Furnace repair, AC installation, heat pumps & more. Local, TSSA registered. Call 705-331-8117.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root { --navy: #1a2744; --navy-light: #2a3a5c; --warm-white: #faf9f7; --cream: #f5f3ef; --amber: #d97706; --amber-light: #fbbf24; --rust: #c2410c; --text: #1f2937; --text-light: #6b7280; }
+        :root { --navy: #1a2744; --navy-light: #2a3a5c; --navy-dark: #111827; --warm-white: #faf9f7; --cream: #f5f3ef; --amber: #d97706; --amber-light: #fbbf24; --text: #1f2937; --text-light: #6b7280; --gradient-warm: linear-gradient(135deg, #d97706 0%, #ea580c 100%); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
         body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm-white); line-height: 1.6; }
-        h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 700; line-height: 1.2; }
+        h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 700; line-height: 1.15; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        header { background: var(--navy); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
-        .header-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        header { background: var(--navy); padding: 16px 0; position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
         .logo { color: white; font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; text-decoration: none; }
         .logo span { color: var(--amber); }
-        nav { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-        nav a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 16px; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
-        nav a:hover { color: var(--amber-light); }
-        .nav-cta { background: var(--amber); color: white !important; border-radius: 6px; font-weight: 600; }
-        .nav-cta:hover { background: var(--rust); }
-
-        
-        /* Dropdown Menu */
+        nav { display: flex; gap: 8px; align-items: center; }
+        nav > a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 16px; font-size: 0.95rem; font-weight: 500; }
+        .nav-cta { background: var(--gradient-warm); color: white !important; border-radius: 50px; padding: 10px 24px !important; font-weight: 600; }
         .nav-dropdown { position: relative; }
-        .nav-dropdown-trigger { display: flex; align-items: center; gap: 4px; color: rgba(255,255,255,0.85); padding: 8px 16px; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: color 0.2s; }
-        .nav-dropdown-trigger::after { content: ''; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; margin-left: 4px; }
-        .nav-dropdown:hover .nav-dropdown-trigger { color: var(--amber-light); }
-        .nav-dropdown-menu { position: absolute; top: 100%; left: 0; background: white; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); min-width: 200px; padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s ease; z-index: 200; }
-        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .nav-dropdown-menu a { display: block; padding: 10px 20px; color: #1f2937; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
-        .nav-dropdown-menu a:hover { background: #f5f3ef; color: #1a2744; }
-
-        /* Mobile Menu */
-        .mobile-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 1001; }
-        .mobile-toggle span { display: block; width: 100%; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; }
-        .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .mobile-toggle.active span:nth-child(2) { opacity: 0; }
-        .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-        .mobile-menu-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--navy); z-index: 1000; flex-direction: column; justify-content: center; align-items: center; gap: 8px; }
+        .nav-dropdown-trigger { display: flex; align-items: center; color: rgba(255,255,255,0.85); padding: 8px 16px; font-size: 0.95rem; cursor: pointer; }
+        .nav-dropdown-trigger::after { content: ''; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; margin-left: 6px; }
+        .nav-dropdown-menu { position: absolute; top: 100%; left: 0; background: white; border-radius: 12px; box-shadow: 0 15px 50px rgba(0,0,0,0.15); min-width: 220px; padding: 12px 0; opacity: 0; visibility: hidden; transition: all 0.3s; }
+        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; }
+        .nav-dropdown-menu a { display: block; padding: 12px 24px; color: var(--text); text-decoration: none; }
+        .nav-dropdown-menu a:hover { background: var(--cream); }
+        .mobile-toggle { display: none; flex-direction: column; gap: 5px; width: 32px; height: 32px; background: none; border: none; cursor: pointer; }
+        .mobile-toggle span { display: block; width: 100%; height: 2px; background: white; }
+        .mobile-menu-overlay { display: none; position: fixed; inset: 0; background: var(--navy-dark); z-index: 1000; flex-direction: column; justify-content: center; align-items: center; }
         .mobile-menu-overlay.active { display: flex; }
-        .mobile-menu-overlay a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: 500; padding: 16px 32px; transition: color 0.2s; }
-        .mobile-menu-overlay a:hover { color: var(--amber-light); }
-        .mobile-menu-overlay .nav-cta { margin-top: 16px; background: var(--amber); border-radius: 8px; font-size: 1.25rem; }
-        .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); padding: 80px 0; }
-        .page-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .page-hero h1 { color: white; font-size: clamp(2.25rem, 4.5vw, 3.25rem); margin-bottom: 20px; }
+        .mobile-menu-overlay a { color: white; text-decoration: none; font-size: 1.5rem; padding: 16px; }
+        .page-hero { background: var(--navy-dark); padding: 140px 0 80px; position: relative; }
+        .page-hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); }
+        .page-hero-content { position: relative; z-index: 2; max-width: 800px; }
+        .page-hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); color: white; margin-bottom: 20px; }
         .page-hero h1 span { color: var(--amber-light); }
-        .page-hero p { color: rgba(255,255,255,0.85); font-size: 1.15rem; margin-bottom: 28px; }
-        .page-hero-image img { width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1rem; transition: all 0.2s; }
-        .btn-primary { background: var(--amber); color: white; }
-        .btn-primary:hover { background: var(--rust); transform: translateY(-2px); }
-        .content-section { padding: 80px 0; }
-        .content-section:nth-child(even) { background: var(--cream); }
+        .page-hero p { color: rgba(255,255,255,0.8); font-size: 1.15rem; margin-bottom: 32px; }
+        .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; border-radius: 50px; font-weight: 600; text-decoration: none; }
+        .btn-primary { background: var(--gradient-warm); color: white; }
+        .services-section { padding: 80px 0; background: var(--navy); }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+        .section-label { display: inline-block; background: rgba(217, 119, 6, 0.15); color: var(--amber-light); padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 20px; }
+        .section-header h2 { font-size: clamp(2rem, 4vw, 2.75rem); color: white; margin-bottom: 16px; }
+        .section-header p { color: rgba(255,255,255,0.7); }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .service-card { background: var(--navy-light); border-radius: 20px; padding: 36px 28px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s; text-decoration: none; }
+        .service-card:hover { transform: translateY(-8px); }
+        .service-icon { width: 70px; height: 70px; background: rgba(217, 119, 6, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
+        .service-icon i { font-size: 1.75rem; color: var(--amber); }
+        .service-card h3 { font-size: 1.35rem; color: white; margin-bottom: 12px; }
+        .service-card p { color: rgba(255,255,255,0.7); }
+        .content-section { padding: 80px 0; background: var(--cream); }
+        .content-section.alt { background: var(--navy); }
         .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .content-grid.reverse { direction: rtl; }
-        .content-grid.reverse > * { direction: ltr; }
-        .content-text h2 { font-size: clamp(1.75rem, 3.5vw, 2.25rem); color: var(--navy); margin-bottom: 20px; }
-        .content-text p { color: var(--text-light); font-size: 1.05rem; margin-bottom: 16px; }
+        .content-text h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); color: var(--navy); margin-bottom: 20px; }
+        .content-section.alt .content-text h2 { color: white; }
+        .content-section.alt .content-text h2 span { color: var(--amber-light); }
+        .content-text p { color: var(--text-light); margin-bottom: 16px; }
+        .content-section.alt .content-text p { color: rgba(255,255,255,0.75); }
         .content-text ul { list-style: none; margin: 24px 0; }
-        .content-text ul li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; color: var(--text); }
-        .content-text ul li::before { content: '✓'; color: var(--amber); font-weight: bold; flex-shrink: 0; }
-        .content-image img { width: 100%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
-        .services-breakdown { padding: 80px 0; }
-        .services-breakdown h2 { text-align: center; font-size: clamp(1.75rem, 3.5vw, 2.25rem); color: var(--navy); margin-bottom: 48px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-        .service-item { background: white; padding: 32px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.06); text-decoration: none; color: inherit; transition: all 0.3s; }
-        .service-item:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); border-color: var(--amber); }
-        .service-item h3 { font-size: 1.25rem; color: var(--navy); margin-bottom: 12px; }
-        .service-item p { color: var(--text-light); font-size: 0.95rem; }
-        .cta { padding: 80px 0; background: linear-gradient(135deg, var(--amber) 0%, var(--rust) 100%); text-align: center; }
-        .cta h2 { color: white; font-size: clamp(1.75rem, 3.5vw, 2.5rem); margin-bottom: 16px; }
-        .cta p { color: rgba(255,255,255,0.9); font-size: 1.15rem; margin-bottom: 28px; }
-        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-        .btn-white { background: white; color: var(--navy); }
-        .btn-white:hover { background: var(--cream); transform: translateY(-2px); }
-        .btn-outline-white { background: transparent; color: white; border: 2px solid white; }
-        .btn-outline-white:hover { background: rgba(255,255,255,0.1); }
-        footer { background: var(--navy); color: white; padding: 60px 0 30px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-        .footer-brand p { color: rgba(255,255,255,0.7); margin-top: 16px; font-size: 0.95rem; }
-        .footer-col h4 { font-size: 1rem; margin-bottom: 20px; color: var(--amber-light); }
-        .footer-col a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 12px; font-size: 0.95rem; transition: color 0.2s; }
-        .footer-col a:hover { color: white; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.9rem; color: rgba(255,255,255,0.6); }
-        @media (max-width: 968px) { .page-hero-grid, .content-grid { grid-template-columns: 1fr; gap: 40px; } .content-grid.reverse { direction: ltr; } .page-hero-image { order: -1; } .footer-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 640px) { .header-inner { justify-content: space-between; } nav { display: none; }
-            .mobile-toggle { display: flex; } .footer-grid { grid-template-columns: 1fr; text-align: center; } .footer-bottom { justify-content: center; text-align: center; } }
+        .content-text ul li { display: flex; gap: 12px; margin-bottom: 12px; }
+        .content-section.alt .content-text ul li { color: rgba(255,255,255,0.85); }
+        .content-text ul li i { color: var(--amber); margin-top: 4px; }
+        .content-image img { width: 100%; border-radius: 20px; }
+        .cta { padding: 80px 0; background: var(--navy-dark); text-align: center; }
+        .cta h2 { font-size: clamp(2rem, 4vw, 2.75rem); color: white; margin-bottom: 16px; }
+        .cta p { color: rgba(255,255,255,0.7); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-phone { font-size: 1.75rem; color: var(--amber-light); font-family: 'Fraunces', serif; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 12px; }
+        footer { background: var(--navy-dark); color: white; padding: 60px 0 24px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand p { color: rgba(255,255,255,0.6); margin-top: 16px; }
+        .footer-col h4 { margin-bottom: 20px; color: var(--amber-light); }
+        .footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; margin-bottom: 12px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+        @media (max-width: 1024px) { .content-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .services-grid, .footer-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 640px) { nav { display: none; } .mobile-toggle { display: flex; } .page-hero { padding: 120px 0 60px; } }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-inner">
-                <a href="index.html" class="logo">Shelswell <span>H&A</span></a>
-                <nav>
-                    <a href="index.html">Home</a>
-                    <div class="nav-dropdown">
-                        <span class="nav-dropdown-trigger">Services</span>
-                        <div class="nav-dropdown-menu">
-                            <a href="furnace-services.html">Furnaces</a>
-                            <a href="air-conditioning.html">Air Conditioning</a>
-                            <a href="heat-pumps.html">Heat Pumps</a>
-                            <a href="water-heaters.html">Water Heaters</a>
-                            <a href="gas-fireplaces.html">Gas Fireplaces</a>
-                            <a href="gas-lines.html">Gas Lines</a>
-                        </div>
-                    </div>
-                    <a href="index.html#about">About</a>
-                    <div class="nav-dropdown">
-                        <span class="nav-dropdown-trigger">Service Area</span>
-                        <div class="nav-dropdown-menu">
-                            <a href="orillia-hvac.html">Orillia</a>
-                            <a href="barrie-hvac.html">Barrie</a>
-                            <a href="oro-medonte-hvac.html">Oro-Medonte</a>
-                            <a href="severn-hvac.html">Severn</a>
-                        </div>
-                    </div>
-                    <a href="contact.html">Contact</a>
-                    <a href="tel:7053318117" class="nav-cta">705-331-8117</a>
-                </nav>
-                <button class="mobile-toggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
+    <header><div class="container"><div class="header-inner"><a href="index.html" class="logo">Shelswell <span>H&A</span></a><nav><a href="index.html">Home</a><div class="nav-dropdown"><span class="nav-dropdown-trigger">Services</span><div class="nav-dropdown-menu"><a href="furnace-services.html">Furnaces</a><a href="air-conditioning.html">Air Conditioning</a><a href="heat-pumps.html">Heat Pumps</a><a href="water-heaters.html">Water Heaters</a><a href="gas-fireplaces.html">Gas Fireplaces</a><a href="gas-lines.html">Gas Lines</a></div></div><a href="index.html#about">About</a><div class="nav-dropdown"><span class="nav-dropdown-trigger">Service Area</span><div class="nav-dropdown-menu"><a href="orillia-hvac.html">Orillia</a><a href="barrie-hvac.html">Barrie</a><a href="oro-medonte-hvac.html">Oro-Medonte</a><a href="severn-hvac.html">Severn</a></div></div><a href="contact.html">Contact</a><a href="tel:7053318117" class="nav-cta">705-331-8117</a></nav><button class="mobile-toggle"><span></span><span></span><span></span></button></div></div></header>
+    <div class="mobile-menu-overlay"><a href="index.html">Home</a><a href="furnace-services.html">Furnaces</a><a href="air-conditioning.html">Air Conditioning</a><a href="heat-pumps.html">Heat Pumps</a><a href="water-heaters.html">Water Heaters</a><a href="gas-fireplaces.html">Gas Fireplaces</a><a href="gas-lines.html">Gas Lines</a><a href="contact.html">Contact</a><a href="tel:7053318117" class="nav-cta">705-331-8117</a></div>
 
-    <div class="mobile-menu-overlay">
-        <a href="index.html">Home</a>
-        <a href="furnace-services.html">Furnaces</a>
-        <a href="air-conditioning.html">Air Conditioning</a>
-        <a href="heat-pumps.html">Heat Pumps</a>
-        <a href="water-heaters.html">Water Heaters</a>
-        <a href="gas-fireplaces.html">Gas Fireplaces</a>
-        <a href="gas-lines.html">Gas Lines</a>
-        <a href="index.html#about">About</a>
-        <a href="orillia-hvac.html">Orillia</a>
-        <a href="barrie-hvac.html">Barrie</a>
-        <a href="oro-medonte-hvac.html">Oro-Medonte</a>
-        <a href="severn-hvac.html">Severn</a>
-        <a href="contact.html">Contact</a>
-        <a href="tel:7053318117" class="nav-cta">705-331-8117</a>
-    </div>
+    <section class="page-hero"><div class="container"><div class="page-hero-content"><h1>HVAC Services in <span>Barrie</span></h1><p>Reliable heating and cooling for Barrie homeowners. From the south end to the north, we keep your home comfortable year-round.</p><a href="tel:7053318117" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call 705-331-8117</a></div></div></section>
 
-    <section class="page-hero">
-        <div class="container">
-            <div class="page-hero-grid">
-                <div class="page-hero-content">
-                    <h1>HVAC Services in <span>Barrie</span></h1>
-                    <p>Barrie's growing fast, and new homes need HVAC done right. Whether you're in a brand-new build in the south end or an established neighbourhood closer to the waterfront, we've got you covered.</p>
-                    <a href="tel:7053318117" class="btn btn-primary">Call 705-331-8117</a>
-                </div>
-                <div class="page-hero-image">
-                    <img src="images/furnace-new-construction.jpg" alt="New construction HVAC installation in Barrie">
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="services-section"><div class="container"><div class="section-header"><span class="section-label">Our Services</span><h2>What We Do in Barrie</h2><p>Complete heating and cooling services for Barrie homes.</p></div><div class="services-grid"><a href="furnace-services.html" class="service-card"><div class="service-icon"><i class="fa-solid fa-fire"></i></div><h3>Furnaces</h3><p>Installation, repair, and maintenance to keep your home warm through cold Barrie winters.</p></a><a href="air-conditioning.html" class="service-card"><div class="service-icon"><i class="fa-solid fa-snowflake"></i></div><h3>Air Conditioning</h3><p>Stay cool during hot summer days with reliable AC service.</p></a><a href="heat-pumps.html" class="service-card"><div class="service-icon"><i class="fa-solid fa-temperature-half"></i></div><h3>Heat Pumps</h3><p>Efficient year-round heating and cooling in one system.</p></a><a href="water-heaters.html" class="service-card"><div class="service-icon"><i class="fa-solid fa-hot-tub-person"></i></div><h3>Water Heaters</h3><p>Tank and tankless water heater installation and repair.</p></a><a href="gas-fireplaces.html" class="service-card"><div class="service-icon"><i class="fa-solid fa-fire-flame-curved"></i></div><h3>Gas Fireplaces</h3><p>Installation and service for cozy, convenient gas fireplaces.</p></a><a href="gas-lines.html" class="service-card"><div class="service-icon"><i class="fa-solid fa-wrench"></i></div><h3>Gas Lines</h3><p>Gas line installation for BBQs, pool heaters, and generators.</p></a></div></div></section>
 
-    <section class="content-section">
-        <div class="container">
-            <div class="content-grid">
-                <div class="content-text">
-                    <h2>Not just another Barrie HVAC company</h2>
-                    <p>Barrie has no shortage of HVAC contractors. Big franchises, one-man operations, companies driving up from the GTA. So why call us?</p>
-                    <p>Because when you call Shelswell, you get Tyrel and Josiah. Same guys at the quote, same guys at the install, same guys if you need service down the road. We're not a call centre dispatching whoever's available—we're a small team that takes pride in our work.</p>
-                    <ul>
-                        <li>Small team, personal service</li>
-                        <li>No corporate runaround</li>
-                        <li>We remember your system</li>
-                        <li>TSSA registered, fully insured</li>
-                    </ul>
-                </div>
-                <div class="content-image">
-                    <img src="images/team-working.jpg" alt="Shelswell team installing HVAC equipment">
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="content-section"><div class="container"><div class="content-grid"><div class="content-text"><h2">Why Barrie Homeowners Choose Us</h2><p>We're a small, local team—not a big franchise. When you call us, you get the same familiar faces every time, not a rotating crew of strangers.</p><ul><li><i class="fa-solid fa-circle-check"></i> Quick response times across Barrie</li><li><i class="fa-solid fa-circle-check"></i> TSSA registered and fully insured</li><li><i class="fa-solid fa-circle-check"></i> Honest, upfront pricing</li><li><i class="fa-solid fa-circle-check"></i> 24/7 emergency service available</li><li><i class="fa-solid fa-circle-check"></i> Same technicians every visit</li></ul></div><div class="content-image"><img src="images/team-together.jpg" alt="Shelswell team"></div></div></div></section>
 
-    <section class="services-breakdown">
-        <div class="container">
-            <h2>What We Do in Barrie</h2>
-            <div class="services-grid">
-                <a href="furnace-services.html" class="service-item">
-                    <h3>Furnace Services</h3>
-                    <p>From older homes near downtown to new builds in the south end—installation, repair, and maintenance for all furnace types.</p>
-                </a>
-                <a href="air-conditioning.html" class="service-item">
-                    <h3>Air Conditioning</h3>
-                    <p>Barrie summers are getting hotter. New AC installations, repairs, and the maintenance that prevents mid-July breakdowns.</p>
-                </a>
-                <a href="heat-pumps.html" class="service-item">
-                    <h3>Heat Pumps</h3>
-                    <p>Popular in Barrie's newer builds. We install, service, and help you maximize available rebates.</p>
-                </a>
-                <a href="water-heaters.html" class="service-item">
-                    <h3>Water Heaters</h3>
-                    <p>Tank and tankless water heaters. Fast replacement when yours fails—often same-day service.</p>
-                </a>
-                <a href="gas-fireplaces.html" class="service-item">
-                    <h3>Gas Fireplaces</h3>
-                    <p>New installations for home renovations and annual service to keep your fireplace running safely.</p>
-                </a>
-                <a href="gas-lines.html" class="service-item">
-                    <h3>Gas Lines</h3>
-                    <p>BBQ hookups for your deck, pool heater connections, gas range installations. Done right by licensed techs.</p>
-                </a>
-            </div>
-        </div>
-    </section>
+    <section class="content-section alt"><div class="container"><div class="content-grid"><div class="content-text"><h2>Areas We Serve <span>in Barrie</span></h2><p>We service all neighbourhoods throughout Barrie, including:</p><ul><li><i class="fa-solid fa-circle-check"></i> South Barrie / Mapleview</li><li><i class="fa-solid fa-circle-check"></i> East Barrie / Bayfield</li><li><i class="fa-solid fa-circle-check"></i> Downtown Barrie</li><li><i class="fa-solid fa-circle-check"></i> North Barrie / Essa Road</li><li><i class="fa-solid fa-circle-check"></i> Holly / Minesing</li><li><i class="fa-solid fa-circle-check"></i> Painswick / Big Bay Point</li></ul><p>Wherever you are in Barrie, we can be there fast.</p></div><div class="content-image"><img src="images/furnace-basement.jpg" alt="HVAC service"></div></div></div></section>
 
-    <section class="content-section">
-        <div class="container">
-            <div class="content-grid reverse">
-                <div class="content-text">
-                    <h2>All Barrie neighbourhoods</h2>
-                    <p>We service homes throughout Barrie—from the established areas near Kempenfelt Bay to the rapidly growing communities in the south end.</p>
-                    <p>New construction? We work with builders and homeowners on complete HVAC systems. Older home? We're experienced with the quirks of established houses and aging equipment.</p>
-                    <ul>
-                        <li>South Barrie / Hewitt's Gate</li>
-                        <li>East Barrie</li>
-                        <li>Holly / Ferndale</li>
-                        <li>Painswick / Ardagh</li>
-                        <li>Downtown / Waterfront</li>
-                    </ul>
-                </div>
-                <div class="content-image">
-                    <img src="images/furnace-basement-2.jpg" alt="Furnace installation in Barrie basement">
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="cta"><div class="container"><h2>Need HVAC Service in Barrie?</h2><p>From emergency repairs to new installations, we're here to help. Call us today for a free estimate.</p><a href="tel:7053318117" class="cta-phone"><i class="fa-solid fa-phone"></i> 705-331-8117</a></div></section>
 
-    <section class="cta">
-        <div class="container">
-            <h2>Need HVAC service in Barrie?</h2>
-            <p>Free quotes, honest advice, and the personal service big companies can't match.</p>
-            <div class="cta-buttons">
-                <a href="tel:7053318117" class="btn btn-white">Call 705-331-8117</a>
-                <a href="contact.html" class="btn btn-outline-white">Contact Us</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">Shelswell <span>H&A</span></a>
-                    <p>Family-owned HVAC services for Orillia, Barrie, and Simcoe County. TSSA registered, fully insured, and committed to honest work.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <a href="furnace-services.html">Furnaces</a>
-                    <a href="air-conditioning.html">Air Conditioning</a>
-                    <a href="heat-pumps.html">Heat Pumps</a>
-                    <a href="water-heaters.html">Water Heaters</a>
-                    <a href="gas-fireplaces.html">Gas Fireplaces</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Service Areas</h4>
-                    <a href="orillia-hvac.html">Orillia</a>
-                    <a href="barrie-hvac.html">Barrie</a>
-                    <a href="oro-medonte-hvac.html">Oro-Medonte</a>
-                    <a href="severn-hvac.html">Severn</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <a href="tel:7053318117">705-331-8117</a>
-                    <span style="color: rgba(255,255,255,0.7); font-size: 0.95rem;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e4909d968188a4978c818897938188888c928587ca878b89">[email&#160;protected]</a></span>
-                    <span style="color: rgba(255,255,255,0.7); font-size: 0.95rem;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0d67627e646c654d7e6568617e7a686161657b6c6e236e6260">[email&#160;protected]</a></span>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2025 Shelswell Heating & Air. All rights reserved.</span>
-                <span>51 Ward Ave, Oro-Medonte, ON</span>
-            </div>
-        </div>
-    </footer>
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></scri
+    <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="logo">Shelswell <span>H&A</span></a><p>Family-owned HVAC services for Orillia, Barrie, and Simcoe County.</p></div><div class="footer-col"><h4>Services</h4><a href="furnace-services.html">Furnaces</a><a href="air-conditioning.html">Air Conditioning</a><a href="heat-pumps.html">Heat Pumps</a><a href="water-heaters.html">Water Heaters</a><a href="gas-fireplaces.html">Gas Fireplaces</a></div><div class="footer-col"><h4>Service Areas</h4><a href="orillia-hvac.html">Orillia</a><a href="barrie-hvac.html">Barrie</a><a href="oro-medonte-hvac.html">Oro-Medonte</a><a href="severn-hvac.html">Severn</a></div><div class="footer-col"><h4>Contact</h4><a href="tel:7053318117">705-331-8117</a><span style="color:rgba(255,255,255,0.6);display:block;margin-bottom:12px;">tyrel@shelswellhvac.com</span><span style="color:rgba(255,255,255,0.6);display:block;">josiah@shelswellhvac.com</span></div></div><div class="footer-bottom"><span>&copy; 2025 Shelswell Heating & Air.</span><span>51 Ward Ave, Oro-Medonte, ON</spa
