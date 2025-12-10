@@ -678,8 +678,8 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <a href="tel:7053318117">705-331-8117</a>
-                    <span style="color: rgba(255,255,255,0.6); font-size: 0.95rem; display: block; margin-bottom: 14px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8bfff2f9eee7cbf8e3eee7f8fceee7e7e3fdeae8a5e8e4e6">[email&#160;protected]</a></span>
-                    <span style="color: rgba(255,255,255,0.6); font-size: 0.95rem; display: block;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e2888d918b838aa2918a878e9195878e8e8a948381cc818d8f">[email&#160;protected]</a></span>
+                    <span style="color: rgba(255,255,255,0.6); font-size: 0.95rem; display: block; margin-bottom: 14px;">tyrel@shelswellhvac.com</span>
+                    <span style="color: rgba(255,255,255,0.6); font-size: 0.95rem; display: block;">josiah@shelswellhvac.com</span>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -776,4 +776,16 @@
         };
 
         const observer = new IntersectionObserver((entries) => {
-            entries.forE
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .why-card, .about-text, .about-images').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
