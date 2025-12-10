@@ -100,4 +100,27 @@
 
     <section class="cta"><div class="container"><h2>Need a Gas Line Installed?</h2><p>From BBQ hookups to generator connections, we handle it all. Call for a free estimate.</p><a href="tel:7053318117" class="cta-phone"><i class="fa-solid fa-phone"></i> 705-331-8117</a></div></section>
 
-    <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="logo">Shelswell <span>H&A</span></a><p>Family-owned HVAC services for Orillia, Barrie, and Simcoe County.</p></div><div class="footer-col"><h4>Services</h4><a href="furnace-services.html">Furnaces</a><a href="air-conditioning.html">Air Conditioning</a><a href="heat-pumps.html">Heat Pumps</a><a href="water-heaters.html">Water Heaters</a><a href="gas-fireplaces.html">Gas Fireplaces</a></div><div class="footer-col"><h4>Service Areas</h4><a href="orillia-hvac.html">Orillia</a><a href="barrie-hvac.html">Barrie</a><a href="oro-medonte-hvac.html">Oro-Medonte</a><a href="severn-hvac.html">Severn</a></div><div class="footer-col"><h4>Contact</h4><a href="tel:7053318117">705-331-8117</a><span style="color:rgba(255,255,255,0.6);display:block;margin-bottom:12px;">tyrel@shelswellhvac.com</span><span style="color:rgba(255,255,255,0.6);display:block;">josiah@shelswellhvac.com</span></div></div><div class="footer-bottom"><span>&copy; 2025 Shelswell Heating & Air.</span><span>51 Ward Ave, Oro-Medonte, ON</spa
+    <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="logo">Shelswell <span>H&A</span></a><p>Family-owned HVAC services for Orillia, Barrie, and Simcoe County.</p></div><div class="footer-col"><h4>Services</h4><a href="furnace-services.html">Furnaces</a><a href="air-conditioning.html">Air Conditioning</a><a href="heat-pumps.html">Heat Pumps</a><a href="water-heaters.html">Water Heaters</a><a href="gas-fireplaces.html">Gas Fireplaces</a></div><div class="footer-col"><h4>Service Areas</h4><a href="orillia-hvac.html">Orillia</a><a href="barrie-hvac.html">Barrie</a><a href="oro-medonte-hvac.html">Oro-Medonte</a><a href="severn-hvac.html">Severn</a></div><div class="footer-col"><h4>Contact</h4><a href="tel:7053318117">705-331-8117</a><span style="color:rgba(255,255,255,0.6);display:block;margin-bottom:12px;">tyrel@shelswellhvac.com</span><span style="color:rgba(255,255,255,0.6);display:block;">josiah@shelswellhvac.com</span></div></div><div class="footer-bottom"><p>© 2025 Shelswell Heating & Air. All rights reserved.</p><p>TSSA Registered</p></div></div></footer>
+    <script>
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu-overlay');
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        document.querySelectorAll('.mobile-dropdown-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                trigger.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
